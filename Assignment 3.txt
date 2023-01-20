@@ -1,0 +1,95 @@
+1. Why are functions advantageous to have in your programs?
+Ans-
+Functions in Python (and in programming in general) are advantageous for several reasons:
+
+1) Functions allow us to group together a set of instructions and reuse them throughout our code, making it more modular and easier to maintain.
+
+2) Functions can include error-handling code, making it easier to handle unexpected situations and bugs in our program.
+
+3) By giving a block of code a simple name that makes it intuitive to comprehend what the code does, functions improve the readability of our code.
+
+4) It is possible to test each function separately, which makes it simpler to detect and correct errors in our code.
+
+
+2. When does the code in a function run: when it's specified or when it's called?
+Ans-
+The code in a function runs when the function is called.
+
+Example:
+def my_function():
+    print("Hello, World!")
+
+my_function()  # This will print "Hello, World!" and Here, the function is being called
+
+3. What statement creates a function?
+Ans-
+The 'def' statement is used to create a function in Python.
+Example:
+def function(arguments):
+        #Code to define function
+
+4. What is the difference between a function and a function call?
+Ans-
+A function is a block of code that has been defined, given a name, and may later be called using its name and arguments to be executed.
+Whereas, a function call is when you actually use the function by calling its name and passing any necessary arguments. When a function is called, the code inside the function is executed with the provided arguments.
+
+5. How many global scopes are there in a Python program? How many local scopes?
+Ans-
+In a python program, there can be only 1 global scope and multiple local scopes.
+A local scope is created every time a function or a class is defined and it contains all the variables and functions that are defined within that function or class. When a function or class is called, a new local scope is created and it becomes the current scope. The local scope is only in effect while the function or class is being executed, and it goes away when the function or class returns.
+
+6. What happens to variables in a local scope when the function call returns?
+Ans-
+When a function call returns, the local scope that was created for that function call, along with all variables defined within that scope, is destroyed.
+That means if there is a function 'func' having a local variable 'x' which will be accessible inside the function, and it's destroyed when the call returns. That means variable 'x' is only available within the scope of function 'func'. The return value of the function can be stored in other variable.
+
+7. What is the concept of a return value? Is it possible to have a return value in an expression?
+Ans-
+When a function completes its execution, it returns a value to the calling code. The 'return' statement allows a function to return a value, which immediately stops the function's execution and returns the specified value to the calling code.
+
+It is possible to have a return value in an expression, as long as the expression is used in a place where a value is expected, such as in an assignment, a comparison, or another operation.
+Example:
+result = subtract(5, 3) + 5
+print(result)  # prints 7
+
+8. If a function does not have a return statement, what is the return value of a call to that function?
+Ans-
+If a function does not have a return statement, the return value of a call to that function is None.
+
+9. How do you make a function variable refer to the global variable?
+Ans-
+The 'global' keyword must be used if we want a function variable to refer to a global variable.
+When you use the global keyword in a function, it tells Python that you want to use the global variable with the same name, instead of creating a new local variable with that name.
+
+10. What is the data type of None?
+Ans-
+It returns the datatype of 'NoneType'
+
+11. What does the sentence import areallyourpetsnamederic do?
+Ans-
+The sentence import areallyourpetsnamederic is an import statement that tries to import a module with the name "areallyourpetsnamederic". If there is no module with that name, it will raise a ModuleNotFoundError error, indicating that the module could not be found.
+Since the module name "areallyourpetsnamederic" is not a standard python module and it's not a common module name, it probably doesn't exist and it would raise an error.
+
+
+12. If you had a bacon() feature in a spam module, what would you call it after importing spam?
+Ans-
+We can import the 'spam' module using the import statement, and then call the bacon() function by referencing the module name and the function name separated by a dot.
+Way 1)
+import spam
+
+spam.bacon()
+
+Way 2)
+from spam import bacon
+
+bacon()
+
+13. What can you do to save a programme from crashing if it encounters an error?
+Ans-
+We can use Exception handling.By using try-except blocks to catch and handle specific errors that our program might encounter. This allows us to handle the error in a controlled way, rather than allowing the program to crash.
+
+14. What is the purpose of the try clause? What is the purpose of the except clause?
+Ans-
+The try clause is used to enclose a block of code that may raise an exception. The code inside the try block is executed, and if an exception is raised, the code inside the corresponding except block is executed.
+
+The purpose of the except clause is to handle the exception by providing a specific response to the exception. It's used to provide an alternative behavior in case of an exception, allowing the program to continue running, instead of crashing.
