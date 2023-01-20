@@ -1,0 +1,100 @@
+1. What exactly is []?
+Ans- 
+[] is an empty list.
+
+We can also create list with items inside the square bracket.
+fruits = ["apple", "banana", "orange"]
+
+2. In a list of values stored in a variable called spam, how would you assign the value 'hello' as the third value? (Assume [2, 4, 6, 8, 10] are in spam.)
+Let's pretend the spam includes the list ['a', 'b', 'c', 'd'] for the next three queries.
+Ans-
+The code given below can help in assigning 'hello' as the third element
+
+spam[2] = 'hello'
+
+The final list spam will be [2, 4, 'hello', 8, 10]
+
+3. What is the value of spam[int(int('3' * 2) / 11)]?
+Ans-
+-'3' * 2 is a string concatenation that results in the string '33'.
+-int('33') converts the string '33' to the integer 33.
+-int(33) / 11 divides the integer 33 by 11 which results in 3.
+-int(3) converts the float number 3 to integer 3
+-spam[3] refers to the fourth element of the list spam.
+
+So the value will be d
+
+4. What is the value of spam[-1]?
+Ans-
+Value will be d
+
+5. What is the value of spam[:2]?
+Value will be ['a','b']
+
+Let's pretend bacon has the list [3.14, 'cat,' 11, 'cat,' True] for the next three questions.
+
+6. What is the value of bacon.index('cat')?
+Ans-
+Output will be: 1
+
+7. How does bacon.append(99) change the look of the list value in bacon?
+Ans-
+[3.14, 'cat', 11, 'cat', True, 99]
+
+8. How does bacon.remove('cat') change the look of the list in bacon?
+Ans-
+bacon.remove('cat') removes the first occurrence of the value 'cat' from the list bacon. So, the list value in bacon would look like this:
+[3.14, 11, 'cat', True]
+
+9. What are the list concatenation and list replication operators?
+Ans-
+List concatenation operator is + and the list replication operator is *.
+
+The list concatenation operator + is used to combine two or more lists together to create a new list. The list replication operator * is used to repeat the elements of a list a specified number of times. 
+
+10. What is difference between the list methods append() and insert()?
+Ans-
+The list.append() method adds an element to the end of the list. It takes one argument, which is the element to be added, and it doesn't require any additional information about the position where the element should be added.
+On the other hand, the list.insert() method adds an element to a specific position in the list. It takes two arguments, the first one is the index where the element should be added, and the second one is the element to be added.
+
+11. What are the two methods for removing items from a list?
+Ans-
+There are two methods for removing items from a list: the list.remove() method and the del statement.
+The list.remove() method is used to remove the first occurrence of a specified item from the list. It takes one argument, which is the item to be removed.
+The del statement is used to remove an item from a list by specifying its index. It takes one argument, which is the index of the item to be removed. 
+
+12. Describe how list values and string values are identical.
+Ans-
+They are both used to store collections of items, they are both ordered, indexed and support slicing and iteration, they are both immutable and have built-in methods, they can be concatenated and replicated using the same operators and they can be used as elements of other data structures.
+
+13. What's the difference between tuples and lists?
+Ans-
+The main difference between tuples and lists is that tuples are immutable, meaning that the elements of a tuple cannot be changed after it has been created, while lists are mutable, meaning that you can add, remove, or change the elements of a list after it has been created.
+
+14. How do you type a tuple value that only contains the integer 42?
+Ans-
+my_tuple = tuple("42")
+or
+my_tuple = tuple([42])
+
+15. How do you get a list value's tuple form? How do you get a tuple value's list form?
+Ans-
+To get a list value's tuple form, we can use the built-in tuple() function and pass the list value as an argument
+Ex:
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list)
+
+To get a tuple value's list form, we can use the built-in list() function and pass the tuple value as an argument.
+ex:
+my_tuple = (1, 2, 3)
+my_list = list(my_tuple)
+
+16. Variables that "contain" list values are not necessarily lists themselves. Instead, what do they contain?
+Ans-
+A variable does not store the actual data , but instead, it stores a reference to the memory location where the data is stored. So, when we create a list and assign it to a variable, the variable holds a reference to the list object, not the list itself.
+
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+Ans-
+copy.copy() creates a shallow copy of an object, while copy.deepcopy() creates a deep copy of an object.
+A shallow copy creates a new object with a new reference to the original object's data, while a deep copy creates an entirely new object and new data that is a copy of the original object's data.
+
