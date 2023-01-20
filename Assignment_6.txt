@@ -1,0 +1,74 @@
+1. What are escape characters, and how do you use them?
+Ans-
+For inserting characters that are illegal in a string, we use an escape character.
+text = "Welcome to "new" world."
+This will give syntax error
+Instead we can use backslash to fix this problem
+text = "Welcome to \"new\" world."
+
+2. What do the escape characters n and t stand for?
+Ans-
+The esacpe character 'n' will start new line from where it is mentioned
+ex:
+txt = "Hello\nWorld!"
+print(txt) 
+
+output:
+Hello
+World!
+
+The esacpe character 't' will create a whitespace where it is described
+txt = "Hello\tWorld!"
+print(txt) 
+
+output:
+Hello   World!
+
+3. What is the way to include backslash characters in a string?
+Ans-
+
+The backslash ("\") character is a special escape character used to indicate other special characters such as new lines (\n), tabs (\t), or quotation marks (\").
+
+If we want to include a backslash character itself, we need to use two backslashes 
+ex:
+txt = "\\Text"
+
+4. The string "Howl's Moving Castle" is a correct value. Why isn't the single quote character in the word Howl's not escaped a problem?
+Ans-
+The single quote in Howl's is correct because we've used double quotes to mark the beginning and end of the string.
+
+5. How do you write a string of newlines if you don't want to use the n character?
+Ans-
+In that case, we have to use print() function and write string in way given below:
+print("Hello")
+print("world")
+
+6. What are the values of the given expressions?
+'Hello, world!'[1] - 'e'
+'Hello, world!'[0:5] - 'Hello'
+'Hello, world!'[:5] - 'Hello'
+'Hello, world!'[3:] - 'lo, world!'
+
+7. What are the values of the following expressions?
+'Hello'.upper() - 'HELLO'
+'Hello'.upper().isupper() - True
+'Hello'.upper().lower() - 'hello'
+
+8. What are the values of the following expressions?
+'Remember, remember, the fifth of July.'.split() - ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+
+'-'.join('There can only one.'.split()) - 'There-can-only-one.'
+
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+Ans-
+.ljust()- This function left aligns the string according to the width specified and fills remaining space of line with blank space if ‘ fillchr ‘ argument is not passed.
+
+.rjust() - This function right aligns the string according to the width specified and fills remaining space of line with blank space if ‘ fillchr ‘ argument is not passed.
+
+.center()-This function center aligns the string according to the width specified and fills remaining space of line with blank space if ‘ fillchr ‘ argument is not passed.
+
+10. What is the best way to remove whitespace characters from the start or end?
+Ans-
+We can use ".strip()" method to remove whitespace and charaters from the beginning and the end of a string.
+.lstrip() method can be used to remove whitespace and characters only from the beginning of a string.
+.rstrip() method can be used to remove whitespace and characters only from the end of a string.
