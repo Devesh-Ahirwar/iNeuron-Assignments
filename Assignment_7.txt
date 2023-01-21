@@ -1,0 +1,122 @@
+1. What is the name of the feature responsible for generating Regex objects?
+Ans-
+The name of the feature responsible for generating Regular Expression (Regex) objects in Python is the 're' module.
+
+2. Why do raw strings often appear in Regex objects?
+Ans-
+Regular expressions use backslashes as special characters, but backslashes also have special meaning in Python strings (e.g., for escape sequences). Using a raw string for the regular expression pattern avoids having to escape the backslashes, making the pattern easier to read and write.
+
+3. What is the return value of the search() method?
+Ans-
+Returns a "match object" if a match is found, otherwise it returns None.
+
+4. From a Match item, how do you get the actual strings that match the pattern?
+Ans-
+The group() method returns the matched string. If the match has any groups defined, we can pass the group number (index) as an argument to the group() method to retrieve the specific group.
+
+5. In the regex which created from the r'(\d\d\d)-(\d\d\d-\d\d\d\d)', what does group zero cover? Group 2? Group 1?
+Ans-
+The entire regular expression is considered to be group zero (also known as the "whole match"). This means that if you call group() without any arguments, it will return the entire string that matched the pattern.
+
+Group 1 is the first set of parentheses (\d\d\d) which matches 3 digits.
+
+Group 2 is the second set of parentheses (\d\d\d-\d\d\d\d) which matches the pattern of 3 digits followed by a dash and then 4 digits.
+
+6. In standard expression syntax, parentheses and intervals have distinct meanings. How can you tell a regex that you want it to fit real parentheses and periods?
+Ans-
+To specify that we want the regular expression to match actual parentheses or periods, we need to escape them using a backslash. For example, to match the text (hello) we would use the pattern r"\(hello\)". 
+We can also use the re.escape() method. This method takes a string as input and returns a string with all non-alphanumeric characters backslash-escaped, this is useful when we want to match a string that may contain special regular expression characters.
+
+7. The findall() method returns a string list or a list of string tuples. What causes it to return one of the two options?
+Ans-
+If the regular expression pattern contains no groups (i.e., no parentheses), findall() returns a list of strings, where each string is a match of the pattern in the searched string.
+
+If the regular expression pattern contains groups (i.e., parentheses), findall() returns a list of tuples of strings, where each tuple contains the matches of the groups in the pattern. The length of the tuple is equal to the number of groups in the pattern.
+
+8. In standard expressions, what does the | character mean?
+Ans-
+In standard expressions, the | character is used as a logical operator to represent "or".
+
+9. In regular expressions, what does the character stand for?
+Ans- 
+In regular expressions, the | character is used to specify multiple patterns or alternative.
+
+10.In regular expressions, what is the difference between the + and * characters?
+Ans-
+In regular expressions, the + character means "one or more occurrences" of the preceding element, and the * character means "zero or more occurrences" of the preceding element. For example, the regular expression r"a+" would match one or more consecutive "a" characters, while r"a*" would match zero or more consecutive "a" characters.
+
+11. What is the difference between {4} and {4,5} in regular expression?
+Ans-
+In r
+egular expressions, the curly braces {} are used to specify the number of occurrences of the preceding element. The {4} means exactly 4 occurrences, while {4,5} means 4 or 5 occurrences. For example, the regular expression r"a{4}" would match exactly 4 consecutive "a" characters, while r"a{4,5}" would match 4 or 5 consecutive "a" characters.
+
+12. What do you mean by the \d, \w, and \s shorthand character classes signify in regular expressions?
+Ans-
+The shorthand character classes \d, \w and \s in regular expressions represent digits, word characters, and whitespace characters respectively. \d stands for any digit, \w stands for any word character (alphanumeric characters plus the underscore), and \s stands for any whitespace character (space, tab, newline, etc).
+
+13. What do means by \D, \W, and \S shorthand character classes signify in regular expressions?
+Ans-
+The shorthand character classes \D, \W and \S in regular expressions represent the opposite of the shorthand character classes \d, \w, and \s respectively. \D stands for any non-digit character, \W stands for any non-word character, and \S stands for any non-whitespace character.
+
+14. What is the difference between .*? and .*?
+Ans-
+The difference between .*? and .* is that .*? is a "non-greedy" version of the .* regular expression. The .* regular expression matches as much text as possible, while the .*? regular expression matches as little text as possible. This difference is only relevant when the regular expression is used in the context of a larger pattern, and the .* and .*? are used to match the same text.
+
+15. What is the syntax for matching both numbers and lowercase letters with a character class?
+Ans-
+To match both numbers and lowercase letters with a character class, we can use the pattern r"[a-z0-9]". This pattern will match any single character that is a lowercase letter or a digit
+
+16. What is the procedure for making a normal expression in regax case insensitive?
+Ans-
+To make a regular expression case-insensitive, we can use the re.IGNORECASE flag when compiling the regular expression. For example: re.compile(pattern, re.IGNORECASE).
+
+17. What does the . character normally match? What does it match if re.DOTALL is passed as 2nd argument in re.compile()?
+Ans-
+In regular expressions, the . character normally matches any single character except a newline character.
+If re.DOTALL is passed as the second argument in the re.compile() function, the . character will match any character, including the newline character.
+
+18. If numReg = re.compile(r'\d+'), what will numRegex.sub('X', '11 drummers, 10 pipers, five rings, 4 hen') return?
+Ans-
+If numReg = re.compile(r'\d+'), numRegex.sub('X', '11 drummers, 10 pipers, five rings, 4 hen') will return 'X drummers, X pipers, five rings, X hen'. The sub() method replaces all occurrences of the regular expression pattern \d+ (one or more digits) with the replacement string 'X'.
+
+19. What does passing re.VERBOSE as the 2nd argument to re.compile() allow to do?
+Ans-
+Passing re.VERBOSE as the second argument to the re.compile() function allows you to include whitespace and comments within the regular expression pattern. This makes the pattern more readable and easier to understand.
+
+20. How would you write a regex that match a number with comma for every three digits? It must match the given following:
+'42'
+'1,234'
+'6,368,745'
+but not the following:
+'12,34,567' (which has only two digits between the commas)
+'1234' (which lacks commas)
+Ans-
+number_pattern = r"\d{1,3}(,\d{3})*"
+
+21. How would you write a regex that matches the full name of someone whose last name is Watanabe? You can assume that the first name that comes before it will always be one word that begins with a capital letter. The regex must match the following:
+'Haruto Watanabe'
+'Alice Watanabe'
+'RoboCop Watanabe'
+but not the following:
+'haruto Watanabe' (where the first name is not capitalized)
+'Mr. Watanabe' (where the preceding word has a nonletter character)
+'Watanabe' (which has no first name)
+'Haruto watanabe' (where Watanabe is not capitalized)
+Ans-
+name_pattern = r"[A-Z][a-z]+\sWatanabe"
+
+22. How would you write a regex that matches a sentence where the first word is either Alice, Bob, or Carol; the second word is either eats, pets, or throws; the third word is apples, cats, or baseballs; and the sentence ends with a period? This regex should be case-insensitive. It must match the following:
+'Alice eats apples.'
+'Bob pets cats.'
+'Carol throws baseballs.'
+'Alice throws Apples.'
+'BOB EATS CATS.'
+but not the following:
+'RoboCop eats apples.'
+'ALICE THROWS FOOTBALLS.'
+'Carol eats 7 cats.'
+
+Ans-
+import re
+sentence_pattern = r"(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|cats|baseballs)\."
+compiled_pattern = re.comp
