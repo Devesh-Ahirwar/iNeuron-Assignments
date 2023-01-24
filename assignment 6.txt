@@ -1,0 +1,28 @@
+Q1. Describe three applications for exception processing.
+Ans-
+1) Handling errors in a program, such as when a user inputs invalid data or a file cannot be found.
+2) Performing cleanup tasks, such as closing open files or releasing resources.
+3) Debugging, by allowing the program to stop execution and provide information about the error.
+
+
+Q2. What happens if you don't do something extra to treat an exception?
+Ans-
+The program will likely crash or produce unexpected results.
+
+
+Q3. What are your options for recovering from an exception in your script?
+Ans-
+1) Using try-except blocks to catch and handle specific exceptions.
+2) Using a finally block to perform cleanup tasks regardless of whether an exception occurs.
+3) Returning an error code or status message to the calling function or program.
+
+Q4. Describe two methods for triggering exceptions in your script.
+ans-
+1) Using a raise statement to throw an exception explicitly.
+2) Encountering an error or exceptional condition that raises an exception implicitly, such as dividing by zero or accessing an out-of-bounds array index.
+
+
+Q5. Identify two methods for specifying actions to be executed at termination time, regardless of whether or not an exception exists.
+Ans-
+1) Using the finally block in the try-except-finally structure.
+2) Registering a cleanup function to be called using the atexit module in python.
