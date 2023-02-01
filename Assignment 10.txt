@@ -1,0 +1,24 @@
+1) The shutil.copy() function is used to copy a single file, whereas shutil.copytree() is used to copy an entire directory (including all subdirectories and files).
+
+2) The os.rename() function is used to rename files.
+
+3) The send2trash module's send2trash() function is used to send files or folders to the trash or recycle bin, whereas the shutil module's rmtree() function is used to permanently delete files and directories.
+
+4) The equivalent of the open() method in the ZipFile object is the ZipFile() constructor.
+
+5)
+import os
+import shutil
+
+def search_and_copy(src_folder, dst_folder, extension):
+    for dirpath, dirnames, filenames in os.walk(src_folder):
+        for filename in filenames:
+            if filename.endswith(extension):
+                src_file = os.path.join(dirpath, filename)
+                dst_file = os.path.join(dst_folder, filename)
+                shutil.copy2(src_file, dst_file)
+
+src_folder = "/path/to/src/folder"
+dst_folder = "/path/to/dst/folder"
+extension = ".pdf"
+search_and_copy(src_folder, dst_folder, extension)
