@@ -1,0 +1,23 @@
+1) PdfFileReader and PdfFileWriter objects should be opened in binary mode ('rb' and 'wb' respectively).
+
+2) To get a Page object for page 5 from a PdfFileReader object, we can use the getPage() method: page = pdf_reader.getPage(4), where 4 is the zero-based index of the page.
+
+3) The number of pages in a PDF document can be accessed through the numPages variable of a PdfFileReader object: num_pages = pdf_reader.numPages
+
+4) If a PdfFileReader object's PDF is encrypted with the password 'swordfish', we need to call the decrypt method with the password as argument: pdf_reader.decrypt('swordfish')
+
+5) To rotate a page, you can use the rotateClockwise or rotateCounterClockwise methods of a Page object, which rotate the page 90 degrees clockwise or counterclockwise, respectively.
+
+6) A Run object is a sequence of characters with the same style and font, while a Paragraph object represents a complete paragraph in a Word document, containing one or more Runs.
+
+7) To obtain a list of Paragraph objects for a Document object stored in a variable named doc, we can use the paragraphs attribute: para_list = doc.paragraphs
+
+8) The character style in Word documents is represented by a Font object, which has bold, underline, italic, strike, and outline attributes.
+
+9) For the bold attribute, False means the text is not bold, True means the text is bold, and None means the bold setting is not specified.
+
+10) To create a Document object for a new Word document, we can use the Document class from the docx library: doc = Document()
+
+11) To add a paragraph with the text 'Hello, there!' to a Document object stored in a variable named doc, we can use the add_paragraph method: para = doc.add_paragraph('Hello, there!')
+
+12) The available levels of headings in Word documents are represented by integers 1 through 9, where 1 is the largest heading and 9 is the smallest.
