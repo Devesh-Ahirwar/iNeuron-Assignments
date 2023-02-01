@@ -1,0 +1,21 @@
+1. What does RGBA stand for?
+RGBA stands for Red Green Blue Alpha.
+2. From the Pillow module, how do you get the RGBA value of any images?
+we can get the RGBA value of an image using the getpixel() method of the Image object, which takes the x and y coordinates of a pixel and returns its RGBA value as a tuple.
+3. What is a box tuple, and how does it work?
+A box tuple is a 4-tuple that defines the left, upper, right, and lower pixel coordinate values of an image or a region within an image.
+
+4. Use your image and load in notebook then, How can you find out the width and height of an Image object?
+To find out the width and height of an Image object, we can use the width and height properties of the Image object.
+
+5. What method would you call to get Image object for a 100×100 image, excluding the lower-left quarter of it?
+we can get an Image object for a 100×100 image, excluding the lower-left quarter of it, by calling the crop() method of the Image object and passing it a box tuple that defines the region we want to keep.
+
+6. After making changes to an Image object, how could you save it as an image file?
+To save the changes to an Image object as an image file, we can use the save() method and pass it the name of the image file to be created or overwritten.
+
+7. What module contains Pillow’s shape-drawing code?
+The ImageDraw module contains Pillow’s shape-drawing code.
+
+8. Image objects do not have drawing methods. What kind of object does? How do you get this kind of object?
+Image objects do not have drawing methods. we can get a ImageDraw object from an Image object by calling the ImageDraw.Draw() method and passing it the Image object.
