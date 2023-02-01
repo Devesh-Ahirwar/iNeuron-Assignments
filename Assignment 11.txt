@@ -1,0 +1,53 @@
+1) The assert statement is used to check if a certain condition is true. If the condition is false, an AssertionError is raised. Here's how we can use the assert statement to check if the variable spam is a negative integer:
+
+assert spam >= 0, "spam is negative"
+
+The code checks if spam >= 0 is true. If it is, nothing happens and the program continues to run. If it is false, an AssertionError is raised with the message "spam is negative".
+
+2) In this case, we want to check if the values of two variables, eggs and bacon, are equal to each other, ignoring case. To do this, we can convert both values to lowercase using the lower() method, and then compare the results:
+
+assert eggs.lower() != bacon.lower(), "eggs and bacon are the same (ignoring case)"
+
+If the lowercase values of eggs and bacon are not equal, the condition eggs.lower() != bacon.lower() is true and nothing happens. If they are equal, an AssertionError is raised with the message "eggs and bacon are the same (ignoring case)".
+
+3) To create an assert statement that will always raise an AssertionError, we can use the following code:
+
+assert False, "This assert will always trigger an AssertionError"
+
+Here, the condition False is always false, so the AssertionError with the message "This assert will always trigger an AssertionError" will always be raised.
+
+4) 
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+5) 
+import logging
+logging.basicConfig(filename='programLog.txt', level=logging.DEBUG)
+
+6)
+The five levels of logging, in increasing order of severity are:
+DEBUG: Detailed information, typically of interest only when diagnosing problems.
+INFO: Confirmation that things are working as expected.
+WARNING: An indication that something unexpected happened or indicative of some problem in the near future. The software is still working as expected.
+ERROR: Due to a more serious problem, the software has not been able to perform some function.
+CRITICAL: A very serious error, indicating that the program itself may be unable to continue running.
+
+7)
+logging.disable(logging.CRITICAL)
+
+8)
+Logging messages can be filtered based on their severity level.
+Logging messages can be directed to different outputs (e.g. console, file, email) based on configuration.
+Logging messages include a timestamp and logging level, making it easier to understand when and why a message was generated.
+
+9)
+The Step Over, Step In, and Step Out buttons in a debugger are used to control the execution of the code being debugged.
+Step Over: Executes the current line of code and moves to the next line, without entering any functions that are called.
+Step In: Enters the function that is called on the current line of code.
+Step Out: Executes the rest of the code in the current function, then returns to the calling function.
+
+10)
+The debugger will stop when it encounters a breakpoint or when the program terminates.
+
+11)
+A breakpoint is a marker that is set in the code to indicate that the debugger should pause execution of the program at that point. This allows the developer to inspect the state of the program and diagnose any issues.
