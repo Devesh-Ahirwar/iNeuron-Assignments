@@ -1,0 +1,70 @@
+1. What is feature engineering, and how does it work? Explain the various aspects of feature engineering in depth.
+Feature engineering is the process of creating new features or transforming existing ones to improve the performance of a machine learning model. The various aspects of feature engineering include feature extraction, feature scaling, feature normalization, and feature selection. Feature extraction involves transforming raw data into a set of features that can be used by a machine learning algorithm. Feature scaling and normalization ensure that each feature has a similar range of values, which helps prevent some features from dominating others. Feature selection involves selecting the most important or relevant features from a large pool of features to improve the model's accuracy.
+
+2. What is feature selection, and how does it work? What is the aim of it? What are the various methods of function selection?
+Feature selection is the process of selecting a subset of the most important or relevant features from a large pool of features. The aim of feature selection is to improve the performance of a machine learning model by reducing overfitting, increasing interpretability, and reducing computational complexity. The various methods of feature selection include filter methods, wrapper methods, and embedded methods. Filter methods use statistical methods to evaluate the importance of each feature, while wrapper methods use the performance of the model on a validation set to evaluate the importance of each feature. Embedded methods use the learning algorithm itself to evaluate the importance of each feature.
+
+3. Describe the function selection filter and wrapper approaches. State the pros and cons of each approach?
+The filter approach to feature selection uses statistical methods to evaluate the importance of each feature, whereas the wrapper approach uses the performance of the model on a validation set to evaluate the importance of each feature. The pros of the filter approach include its ease of implementation, its ability to handle large feature sets, and its low computational cost. The cons of the filter approach include its sensitivity to the choice of evaluation metric and its inability to take into account the interactions between features. The pros of the wrapper approach include its ability to take into account the interactions between features and its ability to make more informed decisions about feature selection. The cons of the wrapper approach include its high computational cost and its sensitivity to the choice of learning algorithm.
+
+4.
+
+i. Describe the overall feature selection process.
+
+ii. Explain the key underlying principle of feature extraction using an example. What are the most widely used function extraction algorithms?
+
+The overall feature selection process involves first selecting a pool of features, then evaluating the importance of each feature, and finally selecting the most important or relevant features for use in the model.
+
+The key underlying principle of feature extraction is to identify and extract meaningful information from raw data to improve the performance of a machine learning model. A commonly used feature extraction algorithm is principal component analysis (PCA), which transforms the data into a lower-dimensional space while preserving the most important information. Other widely used feature extraction algorithms include linear discriminant analysis (LDA) and independent component analysis (ICA).
+
+5. Describe the feature engineering process in the sense of a text categorization issue.
+In the context of text categorization, feature engineering involves transforming the raw text data into a set of features that can be used by a machine learning algorithm. This can involve converting the text into numerical representations such as term frequency-inverse document frequency (TF-IDF) or bag of words, or using techniques such as word embeddings to capture semantic information. The feature selection process in text categorization involves selecting the most important or relevant features for use in the model, which can be based on metrics such as term frequency or mutual information.
+
+6. What makes cosine similarity a good metric for text categorization? A document-term matrix has two rows with values of (2, 3, 2, 0, 2, 3, 3, 0, 1) and (2, 1, 0, 0, 3, 2, 1, 3, 1). Find the resemblance in cosine.
+Cosine similarity is a good metric for text categorization because it measures the cosine of the angle between two vectors in a high-dimensional space. A document-term matrix has two rows with values of (2, 3, 2, 0, 2, 3, 3, 0, 1) and (2, 1, 0, 0, 3, 2, 1, 3, 1). The cosine similarity can be calculated by finding the dot product of the two vectors and dividing by the product of the magnitude of the vectors.
+
+7.
+
+i. What is the formula for calculating Hamming distance? Between 10001011 and 11001111, calculate the Hamming gap.
+
+ii. Compare the Jaccard index and similarity matching coefficient of two features with values (1, 1, 0, 0, 1, 0, 1, 1) and (1, 1, 0, 0, 0, 1, 1, 1), respectively (1, 0, 0, 1, 1, 0, 0, 1).
+The formula for calculating Hamming distance between two binary strings is the number of positions in which the bits differ.
+Between 10001011 and 11001111, the Hamming distance is 3 (the first, fifth, and seventh bits are different).
+
+The Jaccard index measures the similarity between two sets, with a value of 1 meaning the sets are identical and a value of 0 meaning they have no elements in common.
+The Jaccard index of the two sets (1, 1, 0, 0, 1, 0, 1, 1) and (1, 1, 0, 0, 0, 1, 1, 1) is 3/8.
+
+The similarity matching coefficient (SMC) is another measure of the similarity between two sets, with a value of 1 meaning the sets are identical and a value of -1 meaning they have no elements in common.
+The SMC of the two sets (1, 1, 0, 0, 1, 0, 1, 1) and (1, 1, 0, 0, 0, 1, 1, 1) is 4/8.
+
+8. State what is meant by  "high-dimensional data set"? Could you offer a few real-life examples? What are the difficulties in using machine learning techniques on a data set with many dimensions? What can be done about it?
+A high-dimensional data set refers to a dataset with many features or variables. In other words, it has a large number of dimensions or features.
+Examples of high-dimensional data sets include gene expression data in biology, user-item matrices in recommender systems, and text data in NLP.
+The difficulties in using machine learning techniques on high-dimensional data sets include curse of dimensionality (performance degradation with increasing dimensions), overfitting, and the need for computationally expensive algorithms.
+To overcome these difficulties, techniques such as feature selection, dimensionality reduction, and regularization can be used.
+
+9. Make a few quick notes on:
+
+PCA is an acronym for Personal Computer Analysis.
+
+2. Use of vectors
+
+3. Embedded technique
+CA (Principal Component Analysis) is a statistical method for reducing the dimensionality of data while retaining as much information as possible. It involves transforming the data into a new coordinate system, where the first axis has the largest possible variance, the second axis has the second-largest variance, and so on.
+
+Vectors are mathematical objects that can be added, subtracted, and multiplied by scalars. They can be used to represent points in a high-dimensional space and are an important tool in many machine learning algorithms.
+
+Embedded techniques refer to methods for feature selection that are integrated directly into the learning algorithm, rather than being performed as a separate step. These techniques learn the most important features during the training process, such as regularization methods like Lasso.
+
+10. Make a comparison between:
+
+1. Sequential backward exclusion vs. sequential forward selection
+
+2. Function selection methods: filter vs. wrapper
+
+3. SMC vs. Jaccard coefficient
+Sequential backward exclusion involves starting with all features and removing the least important feature one by one until the best feature subset is found. Sequential forward selection starts with an empty set and adds features one by one until the best feature subset is found.
+
+Filter methods for feature selection are based on statistical tests and calculations, while wrapper methods evaluate the feature subset's performance using a specific machine learning algorithm. Filter methods are faster but may miss important features, while wrapper methods are slower but provide a more accurate assessment of feature importance.
+
+The SMC (Similarity Matching Coefficient) measures the similarity between two sets, with a value of 1 meaning the sets are identical and a value of -1 meaning they have no elements in common. The Jaccard coefficient measures the similarity between two sets, with a value of 1 meaning the sets are identical and a value of 0 meaning they have no elements in common.
