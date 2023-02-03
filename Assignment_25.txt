@@ -1,0 +1,14 @@
+1) What is the difference between enclosing a list comprehension in square brackets and parentheses?
+Enclosing a list comprehension in square brackets creates a list object, while enclosing it in parentheses creates a generator expression. Square brackets create a list in memory, while parentheses create a lazy evaluation, memory-efficient generator object that can be used to generate values one at a time as needed.
+
+2) What is the relationship between generators and iterators?
+A generator is an object that can be used to produce a sequence of values one at a time. An iterator is an object that implements the iterator protocol, which allows it to be used in a for loop. A generator is a specific type of iterator that generates values by executing a function or an expression.
+
+3) What are the signs that a function is a generator function?
+A function is a generator function if it contains at least one yield statement. The yield statement allows a generator function to return a value, then continue execution from the point at which it was paused the next time it is called.
+
+4) What is the purpose of a yield statement?
+The purpose of a yield statement is to produce a value and pause execution of the generator function. The next time the generator function is called, it resumes execution from where it left off and produces the next value in the sequence. This allows the generator to generate values one at a time, reducing memory usage compared to creating a list of all values in memory.
+
+5) What is the relationship between map calls and list comprehensions? Make a comparison and contrast between the two.
+Both map calls and list comprehensions are used to apply a function to elements of a list and produce a new list. However, a map call returns a map object, which is an iterator that generates values one at a time, while a list comprehension creates a list in memory. A list comprehension can be more readable and concise than a map call, but it can also be less memory-efficient. The choice between the two depends on the specific use case and the trade-off between memory usage and readability.
