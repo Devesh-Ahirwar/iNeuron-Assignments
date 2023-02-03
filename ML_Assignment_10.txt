@@ -1,0 +1,52 @@
+Define the Bayesian interpretation of probability.
+Define probability of a union of two events with equation.
+What is joint probability? What is its formula?
+What is chain rule of probability?
+What is conditional probability means? What is the formula of it?
+What are continuous random variables?
+What are Bernoulli distributions? What is the formula of it?
+What is binomial distribution? What is the formula?
+What is Poisson distribution? What is the formula?
+Define covariance.
+Define correlation
+Define sampling with replacement. Give example.
+What is sampling without replacement? Give example.
+What is hypothesis? Give example.
+
+Answers
+1) Bayesian interpretation of probability is a statistical approach that defines probability as a measure of a degree of belief or confidence in an event or hypothesis. The probability is updated as new information becomes available.
+
+2) The probability of a union of two events A and B is defined as the sum of the probabilities of each event minus the overlap, i.e. P(A U B) = P(A) + P(B) - P(A ∩ B)
+
+3) Joint probability is the probability of two events occurring together. It is defined as P(A and B) = P(A ∩ B).
+
+4) The chain rule of probability states that the joint probability of two or more events can be calculated by multiplying the individual conditional probabilities. It is written as P(A1, A2, ..., An) = P(A1 | A2, ..., An-1) * P(A2 | A3, ..., An-1) * ... * P(An-1 | An) * P(An)
+
+5) Conditional probability is the probability of an event given that another event has occurred. It is denoted as P(A | B) and can be calculated as P(A | B) = P(A ∩ B) / P(B).
+
+6) Continuous random variables are random variables that can take an infinite number of values within a range. They are usually represented by a continuous probability density function.
+
+7) Bernoulli distributions are a type of discrete probability distribution that model the outcome of a binary event. The probability of success is denoted as p and the formula for Bernoulli distribution is P(x = 1) = p and P(x = 0) = 1 - p.
+
+8) Binomial distribution is a type of discrete probability distribution that models the number of successes in a fixed number of independent trials, where each trial has the same success probability. The formula for binomial distribution is P(x = k) = (n choose k) * p^k * (1-p)^(n-k), where n is the number of trials and k is the number of successes.
+
+9) Poisson distribution is a type of discrete probability distribution that models the number of events in a fixed interval of time or space, given an average rate of occurrence. The formula for Poisson distribution is P(x = k) = (λ^k * e^-λ) / k!, where λ is the average rate of occurrence and k is the number of events.
+
+10) Covariance is a measure of the association between two random variables. It measures the change in one variable with respect to a change in the other. The formula for covariance is Cov(X, Y) = E[(X - E(X))(Y - E(Y))].
+
+11) Correlation is a measure of the linear relationship between two variables. It is a normalized version of covariance, with a value between -1 and 1. The formula for correlation is Corr(X, Y) = Cov(X, Y) / (SD(X) * SD(Y)), where SD(X) and SD(Y) are the standard deviations of X and Y, respectively.
+
+12) Sampling with replacement is a statistical method where items can be selected from a population more than once. For example, if we are drawing balls from a jar, and after each draw we put the ball back into the jar, it is called sampling with replacement.
+
+13) Sampling without replacement is a statistical sampling method where every element of a population is selected once for the sample, and not replaced back in the population after being selected. This means that the same element cannot be selected twice for the sample.
+
+For example, if we want to take a sample of 5 balls from a bag containing 10 balls, we would draw 5 balls without replacement. This means that the 5 balls selected will not be returned to the bag, and we cannot choose the same ball again. The sample size will always be less than or equal to the size of the population.
+
+14) Hypothesis refers to a statement about an unknown population parameter, which is tested using statistical methods. Hypothesis testing is a fundamental concept in statistical inference that involves making an educated guess or assumption about a population based on a sample, and then using data to test the accuracy of that assumption.
+
+For example, if we believe that the average height of adult males in a certain population is 70 inches, we can form a hypothesis as:
+
+H0: The average height of adult males in the population is equal to 70 inches.
+Ha: The average height of adult males in the population is not equal to 70 inches.
+
+In this example, the null hypothesis (H0) states that the average height is 70 inches, and the alternative hypothesis (Ha) states that the average height is not equal to 70 inches. The goal of the hypothesis test is to determine if there is enough evidence to reject the null hypothesis in favor of the alternative hypothesis.
