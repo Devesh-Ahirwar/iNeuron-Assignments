@@ -1,0 +1,37 @@
+1. What is the result of the code, and why?
+>>> def func(a, b=6, c=8):
+print(a, b, c)
+>>> func(1, 2)
+The result is "1 2 8", because the function "func" is called with the arguments 1 and 2, where 1 is assigned to the argument "a" and 2 is assigned to the argument "b". The argument "c" is not assigned any value and it takes its default value, which is 8.
+
+2. What is the result of this code, and why?
+>>> def func(a, b, c=5):
+print(a, b, c)
+>>> func(1, c=3, b=2)
+The result is "1 2 3", because the function "func" is called with the arguments 1, c=3, b=2. The argument "c" is assigned the value 3 and "b" is assigned the value 2, and "a" is assigned the value 1.
+
+3. How about this code: what is its result, and why?
+>>> def func(a, *pargs):
+print(a, pargs)
+>>> func(1, 2, 3)
+The result is "1 (2, 3)", because the function "func" is called with the arguments 1, 2, 3. The argument "a" is assigned the value 1 and the rest of the arguments are assigned to the "pargs" parameter, which is a tuple.
+
+4. What does this code print, and why?
+>>> def func(a, **kargs):
+print(a, kargs)
+>>> func(a=1, c=3, b=2)
+The result is "1 {'c': 3, 'b': 2}", because the function "func" is called with the arguments a=1, c=3, b=2. The argument "a" is assigned the value 1 and the rest of the arguments are assigned to the "kargs" parameter, which is a dictionary.
+
+5. What gets printed by this, and explain?
+>>> def func(a, b, c=8, d=5): print(a, b, c, d)
+>>> func(1, *(5, 6))
+The result is "1 5 6 5", because the function "func" is called with the arguments 1 and the tuple (5, 6). The argument "a" is assigned the value 1 and the first value of the tuple (5) is assigned to the argument "b" and the second value of the tuple (6) is assigned to the argument "c". The argument "d" is not assigned any value and it takes its default value, which is 5.
+
+6. what is the result of this, and explain?
+>>> def func(a, b, c): a = 2; b[0] = 'x'; c['a'] = 'y'
+>>> l=1; m=[1]; n={'a':0}
+>>> func(l, m, n)
+>>> l, m, n
+The result is "l ['x'] {'a': 'y'}". The function "func" is called with the arguments l, m, and n. Within the function, the value of the local variable "a" is changed to 2, but this change is only local to the function and it does not affect the value of the variable "l" outside the function. The first element of the list "m" is changed to 'x', which affects the list "m". The value of the key 'a' in the dictionary "n" is changed to 'y', which affects the dictionary "n". After the function is executed, the final values of the variables are l=1, m=['x'], and n={'a':'y'}.
+
+
