@@ -1,0 +1,46 @@
+1. What are the key tasks involved in getting ready to work with machine learning modeling?
+The key tasks involved in getting ready to work with machine learning modeling include data collection and preparation, data exploration and visualization, feature engineering, feature selection, and model selection and evaluation.
+
+2. What are the different forms of data used in machine learning? Give a specific example for each of them.
+The different forms of data used in machine learning include numeric data, categorical data, time-series data, and text data. An example of numeric data is age, an example of categorical data is gender, an example of time-series data is stock prices, and an example of text data is product reviews.
+
+3. Distinguish:
+
+           1. Numeric vs. categorical attributes
+
+            2. Feature selection vs. dimensionality reduction
+Numeric attributes are attributes that have a numerical value, such as height or weight. Categorical attributes are attributes that have a limited number of values, such as color or gender. Feature selection refers to the process of selecting a subset of the available features to use in modeling. Dimensionality reduction refers to the process of reducing the number of features while preserving the information content.
+
+
+4. Make quick notes on any two of the following:
+
+            1. The histogram
+
+             2. Use a scatter plot
+
+              3.PCA (Personal Computer Aid)
+A histogram is a graphical representation of the distribution of a set of data. A scatter plot is a graphical representation of the relationship between two variables. PCA (Principal Component Analysis) is a dimensionality reduction technique used to reduce the number of variables in a data set while preserving the information content.
+
+
+5. Why is it necessary to investigate data? Is there a discrepancy in how qualitative and quantitative data are explored?
+It is necessary to investigate data in order to understand the underlying patterns and relationships, and to identify potential issues such as outliers or missing data. There is a difference in how qualitative and quantitative data are explored, with quantitative data typically being explored using numerical techniques such as histograms, scatter plots, and central inclination measures, while qualitative data is typically explored using techniques such as cross-tabs and contingency tables.
+
+
+6. What are the various histogram shapes? What exactly are ‘bins'?
+The various histogram shapes include symmetrical, unimodal, bimodal, multimodal, and uniform. Bins are the intervals into which the data is divided in order to construct a histogram.
+
+
+7. How do we deal with data outliers?
+Data outliers can be dealt with by removing them, transforming them, or imputing missing values.
+
+
+8. What are the various central inclination measures? Why does mean vary too much from median in certain data sets?
+The various central inclination measures include mean, median, and mode. Mean varies too much from median in certain data sets due to the presence of outliers or skewness.
+
+
+9. Describe how a scatter plot can be used to investigate bivariate relationships. Is it possible to find outliers using a scatter plot?
+A scatter plot can be used to investigate bivariate relationships by plotting the values of two variables against each other. Outliers can be identified using a scatter plot by observing points that are far away from the general trend of the data.
+
+
+10. Describe how cross-tabs can be used to figure out how two variables are related.
+Cross-tabs can be used to figure out how two variables are related by creating a contingency table that shows the distribution of the values of one variable for each value of another variable. This can help to identify patterns and relationships in the data.
