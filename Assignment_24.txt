@@ -1,0 +1,22 @@
+1. What is the relationship between def statements and lambda expressions ?
+The relationship between def statements and lambda expressions is that they are both used to define functions in Python. A def statement is used to define a regular named function, while a lambda expression is used to define an anonymous, one-line function.
+
+2. What is the benefit of lambda?
+The benefit of lambda is that it allows for the creation of small, throwaway functions that can be used in various functional programming constructs, such as map, filter, and reduce. They are also useful for creating simple functions that are only used once and don't require a name.
+
+3. Compare and contrast map, filter, and reduce.
+map, filter, and reduce are all functions that can be used to manipulate lists or other iterables. map takes a function and an iterable, and applies the function to each element of the iterable. filter takes a function and an iterable, and returns a new iterable containing only the elements for which the function returns True. reduce takes a function and an iterable, and returns a single value that is the result of applying the function cumulatively to the elements of the iterable.
+
+4. What are function annotations, and how are they used?
+Function annotations are additional information about the type, purpose, or behavior of a function that can be added to the function definition. They are used by type checkers and documentation tools to provide additional information about the function.
+
+5. What are recursive functions, and how are they used?
+Recursive functions are functions that call themselves in order to perform a task. They are used to solve problems that can be broken down into smaller subproblems, such as finding the factorial of a number or calculating the Fibonacci sequence.
+
+
+
+6. What are some general design guidelines for coding functions?
+General design guidelines for coding functions include: making functions small and simple, giving functions meaningful names, avoiding global variables, providing good documentation, and using meaningful return values.
+
+7. Name three or more ways that functions can communicate results to a caller.
+Three or more ways that functions can communicate results to a caller are: by returning a value, by using global variables, and by modifying a mutable argument passed as a reference.
