@@ -1,0 +1,96 @@
+1. What is the result of the code, and explain?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+print(X)
+
+
+>>> func()
+The result of the code is "iNeuron". The variable "X" is defined outside of the function "func", and its value is "iNeuron". The function "func" prints the value of the variable "X", which is "iNeuron".
+
+2. What is the result of the code, and explain?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+X = 'NI!'
+
+
+>>> func()
+>>> print(X)
+
+The result of the code is:
+
+NI!
+iNeuron
+
+Within the function "func", the variable "X" is assigned a new value "NI!", but this change only affects the local variable "X" within the function. The global variable "X" remains unchanged, and its value is "iNeuron". After the function "func" is executed, the value of "X" is printed and it is "iNeuron".
+
+3. What does this code print, and why?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+X = 'NI'
+print(X)
+
+
+>>> func()
+>>> print(X)
+
+The result of the code is:
+
+NI
+iNeuron
+
+The function "func" assigns the value "NI" to the local variable "X", and the function prints this value. After the function "func" is executed, the value of the global variable "X" is printed and it is "iNeuron".
+
+4. What output does this code produce? Why?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+global X
+X = 'NI'
+
+
+>>> func()
+>>> print(X)
+
+The result of the code is "NI". The "global" keyword is used in the function "func" to indicate that the assignment to the variable "X" should be made to the global variable "X". The function "func" assigns the value "NI" to the global variable "X". After the function is executed, the value of the global variable "X" is printed and it is "NI".
+
+5. What about this code—what’s the output, and why?
+
+
+>>> X = 'iNeuron'
+>>> def func():
+X = 'NI'
+def nested():
+print(X)
+nested()
+
+
+>>> func()
+>>> X
+
+The result of the code is "NI". The function "func" defines a nested function "nested" that prints the value of the variable "X". However, the value of "X" is not defined within the nested function, so it is resolved in the nearest enclosing scope, which is the function "func", where "X" has the value "NI".
+
+6. How about this code: what is its output in Python 3, and explain?
+
+
+>>> def func():
+X = 'NI'
+def nested():
+nonlocal X
+X = 'Spam'
+nested()
+print(X)
+
+
+>>> func()
+
+The result of the code is "Spam". The function "func" defines a nested function "nested" that uses the "nonlocal" keyword to indicate that the assignment to the variable "X" should be made to the nearest enclosing non-global scope, which is the function "func". The function "nested" assigns the value "Spam" to the variable "X". After the function "func" is executed, the value of the variable "X" is printed and it is "Spam".
+
+
+
