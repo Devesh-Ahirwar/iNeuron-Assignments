@@ -1,0 +1,59 @@
+1. What is the definition of a target function? In the sense of a real-life example, express the target function. How is a target function's fitness assessed?
+A target function is a mathematical function that maps input variables to output variables. In a real-life example, the target function could be a linear regression model that maps input variables like age, income, and education level to a target output variable like house price. The fitness of a target function is assessed by its ability to accurately predict the target output based on the input variables.
+
+2. What are predictive models, and how do they work? What are descriptive types, and how do you use them? Examples of both types of models should be provided. Distinguish between these two forms of models.
+Predictive models are models that use data to make predictions about future events or outcomes. They work by learning the relationship between input variables and target outputs, and then using that knowledge to make predictions. Descriptive models are models that describe the underlying relationships and patterns in data, without making predictions. For example, a cluster analysis model is a descriptive model that can be used to identify groups of similar data points.
+
+3. Describe the method of assessing a classification model's efficiency in detail. Describe the various measurement parameters.
+To assess the efficiency of a classification model, metrics such as accuracy, precision, recall, F1 score, and AUC (Area Under the Curve) can be used. Accuracy measures the proportion of correct predictions out of all predictions, while precision and recall measure the model's ability to identify true positive cases among all positive cases and true positive cases among all actual positive cases, respectively. The F1 score is a weighted average of precision and recall, and AUC represents the model's ability to distinguish between positive and negative cases.
+
+4. 
+i. In the sense of machine learning models, what is underfitting? What is the most common reason for underfitting?
+ii. What does it mean to overfit? When is it going to happen?
+iii. In the sense of model fitting, explain the bias-variance trade-off.
+
+i. Underfitting occurs when a model is too simple to capture the underlying patterns and relationships in the data. The most common reason for underfitting is the use of a model with too few parameters.
+ii. Overfitting occurs when a model is too complex and fits the training data too well, but fails to generalize to new data. Overfitting can occur when there is too much noise in the data or when the model has too many parameters.
+iii. The bias-variance trade-off is the balance between a model's ability to fit the training data well (low bias) and its ability to generalize to new data (low variance). A model with high bias will underfit the data, while a model with high variance will overfit the data.
+
+5. Is it possible to boost the efficiency of a learning model? If so, please clarify how.
+Yes, the efficiency of a learning model can be improved by using techniques such as feature selection, regularization, ensembling, and early stopping. Feature selection involves selecting a subset of the input variables that have the greatest impact on the target output. Regularization involves adding a penalty term to the model's loss function to prevent overfitting. Ensembling involves combining the predictions of multiple models to produce a more accurate prediction. Early stopping involves stopping the training process when the model's performance on a validation set stops improving
+
+6. How would you rate an unsupervised learning model's success? What are the most common success indicators for an unsupervised learning model?
+An unsupervised learning model's success is typically evaluated by clustering quality measures such as the Silhouette score, the Calinski-Harabasz index, and the Davies-Bouldin index. These measures evaluate the similarity of data points within the same cluster and the dissimilarity between different clusters.
+
+7. Is it possible to use a classification model for numerical data or a regression model for categorical data with a classification model? Explain your answer.
+No, it's not possible to use a classification model for numerical data or a regression model for categorical data. Classification models are used for categorical data, and regression models are used for numerical data. The choice of model depends on the type of data that needs to be predicted.
+
+8. Describe the predictive modeling method for numerical values. What distinguishes it from categorical predictive modeling?
+Predictive modeling for numerical values is called regression analysis. The goal is to find a function that maps the input variables to a continuous output value. It is different from categorical predictive modeling (classification) where the goal is to predict a categorical value.
+
+9. The following data were collected when using a classification model to predict the malignancy of a group of patients' tumors:
+         i. Accurate estimates – 15 cancerous, 75 benign
+         ii. Wrong predictions – 3 cancerous, 7 benign
+                Determine the model's error rate, Kappa value, sensitivity, precision, and F-measure.
+Error rate = (Wrong predictions) / (Total predictions) = (3 + 7) / (15 + 75 + 3 + 7) = 10 / 100 = 0.1 or 10%.
+Kappa value = (Accuracy - Chance Accuracy) / (1 - Chance Accuracy) = (15 + 75) / 100 - (15 + 3) / 100 * (15 + 7) / 100 / (1 - (15 + 3) / 100 * (15 + 7) / 100) = 0.63.
+Sensitivity = (True Positive) / (True Positive + False Negative) = 15 / (15 + 3) = 0.83.
+Precision = (True Positive) / (True Positive + False Positive) = 15 / (15 + 7) = 0.68.
+F-measure = 2 * Precision * Sensitivity / (Precision + Sensitivity) = 2 * 0.68 * 0.83 / (0.68 + 0.83) = 0.75.
+
+10. Make quick notes on:
+         1. The process of holding out
+         2. Cross-validation by tenfold
+         3. Adjusting the parameters
+Holding out is a validation method where a portion of the dataset is reserved for testing the model's performance.
+
+Cross-validation by tenfold refers to dividing the dataset into 10 equal parts and training the model on 9 parts and evaluating it on the remaining part. This process is repeated 10 times with a different part being used for evaluation each time.
+
+Adjusting the parameters refers to modifying the hyperparameters of a machine learning model to improve its performance.
+
+11. Define the following terms: 
+         1. Purity vs. Silhouette width
+         2. Boosting vs. Bagging
+         3. The eager learner vs. the lazy learner
+Purity vs. Silhouette width: Purity is a measure of cluster quality that evaluates the homogeneity of a cluster by counting the number of data points that belong to the majority class. Silhouette width is a measure of similarity between a data point and the other points in the same cluster, and dissimilarity between the same data point and other points in different clusters.
+
+Boosting vs. Bagging: Boosting is an ensemble learning method that focuses on weighting the data points that are misclassified by the previous models, while bagging is an ensemble learning method that focuses on reducing variance by aggregating the results of several models trained on random samples from the original data.
+
+Eager learner vs. Lazy learner: An eager learner is a model that trains its parameters on all available data, while a lazy learner only trains its parameters when it receives a query for prediction.
