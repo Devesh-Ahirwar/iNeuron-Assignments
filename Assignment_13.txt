@@ -1,0 +1,106 @@
+1. Provide an example of the concepts of Prior, Posterior, and Likelihood.
+Prior probability: The probability of an event before taking into account any new evidence or data. For example, the probability of rolling a six on a fair die is 1/6, assuming no additional information.
+
+Likelihood probability: The probability of observing the data given the hypothesis or model. For example, if we toss a coin and observe five heads in a row, the likelihood of the hypothesis that the coin is fair is small.
+
+Posterior probability: The probability of the hypothesis or model after taking into account new evidence or data. For example, if we observe five heads in a row, the posterior probability of the hypothesis that the coin is fair decreases, and the probability that the coin is biased towards heads increases.
+
+2. What role does Bayes' theorem play in the concept learning principle?
+Bayes' theorem is a fundamental equation in probabilistic reasoning that connects the prior probability, likelihood probability, and posterior probability of an event. In the concept learning principle, Bayes' theorem is used to update the learner's beliefs about the hypothesis or model based on new evidence or data.
+
+3. Offer an example of how the Nave Bayes classifier is used in real life.
+Naive Bayes classifier is used in various real-life applications, such as text classification, spam filtering, sentiment analysis, and medical diagnosis. For example, in email spam filtering, Naive Bayes classifier can classify incoming emails as spam or not spam based on the content of the email and the frequency of certain words or phrases in spam emails.
+
+4. Can the Nave Bayes classifier be used on continuous numeric data? If so, how can you go about doing it?
+Yes, Naive Bayes classifier can be used on continuous numeric data by discretizing the data into a set of categories or bins. One common approach is to use a Gaussian Naive Bayes classifier, where the likelihood probability is modeled using a Gaussian distribution for each feature.
+
+5. What are Bayesian Belief Networks, and how do they work? What are their applications? Are they capable of resolving a wide range of issues?
+Bayesian Belief Networks (BBNs) are graphical models that represent the joint probability distribution over a set of variables using a directed acyclic graph. BBNs can be used for probabilistic inference, decision making, and prediction in a wide range of applications, such as medical diagnosis, risk assessment, and fault diagnosis. BBNs can also handle uncertain and incomplete information, and can be updated easily as new data becomes available.
+
+6. Passengers are checked in an airport screening system to see if there is an intruder. Let I be the random variable that indicates whether someone is an intruder I = 1) or not I = 0), and A be the variable that indicates alarm I = 0). If an intruder is detected with probability P(A = 1|I = 1) = 0.98 and a non-intruder is detected with probability P(A = 1|I = 0) = 0.001, an alarm will be triggered, implying the error factor. The likelihood of an intruder in the passenger population is P(I = 1) = 0.00001. What are the chances that an alarm would be triggered when an individual is actually an intruder?
+In the airport screening system example, the probability of an alarm being triggered given that an individual is an intruder is P(I = 1|A = 1) = P(A = 1|I = 1) * P(I = 1) / (P(A = 1|I = 1) * P(I = 1) + P(A = 1|I = 0) * P(I = 0)) = 0.98 * 0.00001 / (0.98 * 0.00001 + 0.001 * 0.99999) = 0.0097 or approximately 0.97%.
+
+7. An antibiotic resistance test (random variable T) has 1% false positives (i.e., 1% of those who are not immune to an antibiotic display a positive result in the test) and 5% false negatives (i.e., 1% of those who are not resistant to an antibiotic show a positive result in the test) (i.e. 5 percent of those actually resistant to an antibiotic test negative). Assume that 2% of those who were screened were antibiotic-resistant. Calculate the likelihood that a person who tests positive is actually immune (random variable D).
+In the antibiotic resistance test example, the probability that a person who tests positive is actually immune is P(D = 1|T = 1) = P(T = 1|D = 1) * P(D = 1) / (P(T = 1|D = 1) * P(D = 1) + P(T = 1|D = 0) * P(D = 0)) = 0.95 * 0.02 / (0.95 * 0.02 + 0.01 * 0.98) = 0.66 or approximately 66%.
+
+8. In order to prepare for the test, a student knows that there will be one question in the exam that is either form A, B, or C. The chances of getting an A, B, or C on the exam are 30 percent, 20%, and 50 percent, respectively. During the planning, the student solved 9 of 10 type A problems, 2 of 10 type B problems, and 6 of 10 type C problems.
+
+         1. What is the likelihood that the student can solve the exam problem?
+
+         2. Given the student's solution, what is the likelihood that the problem was of form A?
+
+1. To calculate the likelihood that the student can solve the exam problem, we need to use Bayes' theorem. Let A, B, and C be the events that the exam problem is of form A, B, or C, respectively, and let S be the event that the student can solve the problem. Then, we want to calculate P(S), the probability that the student can solve the problem. Using Bayes' theorem, we have:
+
+P(S) = P(S | A)P(A) + P(S | B)P(B) + P(S | C)P(C)
+
+where P(S | A), P(S | B), and P(S | C) are the probabilities that the student can solve the problem given that it is of form A, B, or C, respectively. From the information given in the problem, we know that P(S | A) = 0.9, P(S | B) = 0.2, and P(S | C) = 0.6, and that P(A) = 0.3, P(B) = 0.2, and P(C) = 0.5. Substituting these values into the equation above, we get:
+
+P(S) = (0.9)(0.3) + (0.2)(0.2) + (0.6)(0.5) = 0.54
+
+So the likelihood that the student can solve the exam problem is 0.54.
+
+2. To calculate the likelihood that the problem was of form A given the student's solution, we need to use Bayes' theorem again. Let S and A be defined as before, and let E be the event that the student solved the problem. Then, we want to calculate P(A | E), the probability that the problem was of form A given that the student solved the problem. Using Bayes' theorem, we have:
+P(A | E) = P(E | A)P(A) / P(E)
+
+where P(E | A) is the probability that the student solved the problem given that it is of form A, P(A) is the prior probability that the problem was of form A (0.3), and P(E) is the total probability of the student solving the problem, which we calculated in part 1 to be 0.54. From the information given in the problem, we know that P(E | A) = 0.9. Substituting these values into the equation above, we get:
+
+P(A | E) = (0.9)(0.3) / 0.54 = 0.5
+
+So the likelihood that the problem was of form A given the student's solution is 0.5.
+
+
+9. A bank installs a CCTV system to track and photograph incoming customers. Despite the constant influx of customers, we divide the timeline into 5 minute bins. There may be a customer coming into the bank with a 5% chance in each 5-minute time period, or there may be no customer (again, for simplicity, we assume that either there is 1 customer or none, not the case of multiple customers). If there is a client, the CCTV will detect them with a 99 percent probability. If there is no customer, the camera can take a false photograph with a 10% chance of detecting movement from other objects.
+
+                1. How many customers come into the bank on a daily basis (10 hours)?
+
+                2. On a daily basis, how many fake photographs (photographs taken when there is no customer) and how many missed photographs (photographs taken when there is a customer) are there?
+
+                3. Explain likelihood that there is a customer if there is a photograph?
+Since the time is divided into 5-minute bins, there are 12 bins in an hour and 120 bins in 10 hours. The probability of a customer coming into the bank in each 5-minute bin is 5%, so the expected number of customers in each 5-minute bin is 0.05. Therefore, the expected number of customers in a 10-hour period is:
+
+0.05 x 120 = 6 customers
+
+Therefore, on average, 6 customers come into the bank on a daily basis.
+
+If there is no customer in a 5-minute bin, the probability of a false photograph is 10%, or 0.1. If there is a customer in a 5-minute bin, the probability of a missed photograph is 1% or 0.01. In a 10-hour period, there are 120 x 2 = 240 5-minute bins. The expected number of false photographs is:
+
+0.1 x (240 - 6) = 23.4 false photographs
+
+The expected number of missed photographs is:
+
+0.01 x 6 = 0.06 missed photographs
+
+Therefore, on average, there are about 23.4 false photographs and 0.06 missed photographs on a daily basis.
+
+If there is a photograph, we want to find the likelihood that there is a customer. Let A denote the event that there is a customer, and B denote the event that there is a photograph. We want to find P(A|B), the probability of A given B. By Bayes' theorem, we have:
+
+P(A|B) = P(B|A) * P(A) / P(B)
+
+P(B|A) is the probability of a photograph given that there is a customer, which is 0.99. P(A) is the prior probability of a customer, which is 0.05. P(B) is the total probability of a photograph, which can be calculated as:
+
+P(B) = P(B|A) * P(A) + P(B|not A) * P(not A)
+where not A denotes the complement of A, i.e., no customer.
+
+P(B|not A) is the probability of a photograph given that there is no customer, which is 0.1. P(not A) is 1 - P(A), which is 0.95. Therefore, we have:
+
+P(B) = 0.99 * 0.05 + 0.1 * 0.95 = 0.1045
+
+Plugging these values into the formula, we get:
+
+P(A|B) = 0.99 * 0.05 / 0.1045 ≈ 0.473
+
+So the likelihood that there is a customer given that there is a photograph is about 47.3%.
+
+10. Create the conditional probability table associated with the node Won Toss in the Bayesian Belief network to represent the conditional independence assumptions of the Nave Bayes classifier for the match winning prediction problem in Section 6.4.4.
+In the context of the match winning prediction problem described in Section 6.4.4, the node "Won Toss" is one of the predictor variables used in the Naive Bayes classifier. We can create a conditional probability table for this variable as follows:
+| Won Toss | P(Won Toss)
+|---------|------------
+|   True  |  P_WT
+|  False  |  P(~WT)
+Here, P(Won Toss) is the prior probability of the team winning the toss, and P(~WT) is the prior probability of not winning the toss. These probabilities can be estimated from the training data. P_WT is the conditional probability of winning the match given that the team has won the toss, and can be estimated as follows:
+P(Won Match | Won Toss) = (# of matches won by the team when they won the toss) / (# of matches where the team won the toss)
+Similarly, the conditional probability of winning the match given that the team did not win the toss can be estimated as follows:
+P(Won Match | ~Won Toss) = (# of matches won by the team when they did not win the toss) / (# of matches where the team did not win the toss)
+Using these probabilities, we can compute the posterior probability of winning the match given the value of Won Toss as follows, using Bayes' rule:
+P(Won Match | Won Toss) = P(Won Toss | Won Match) * P(Won Match) / P(Won Toss)
+and similarly for P(Won Match | ~Won Toss).
