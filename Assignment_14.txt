@@ -1,0 +1,91 @@
+1. What is the concept of supervised learning? What is the significance of the name?
+Supervised learning is a machine learning approach in which a model is trained using a labeled dataset, where each data point is associated with a known target variable. The goal is for the model to learn the relationship between the input features and the target variable, so that it can make accurate predictions on new, unseen data. The name "supervised" refers to the fact that the model is provided with "supervision" in the form of labeled data.
+
+2. In the hospital sector, offer an example of supervised learning.
+An example of supervised learning in the hospital sector could be predicting patient outcomes based on medical records and other relevant data. The model would be trained on a dataset of patients with known outcomes (such as recovery or death) and their corresponding medical records, and then used to predict the outcomes of new patients based on their medical records.
+
+3. Give three supervised learning examples.
+Spam detection: a model is trained on a dataset of emails labeled as either spam or not spam, and used to predict whether new, unseen emails are spam.
+Image classification: a model is trained on a dataset of labeled images (e.g. dogs vs cats) and used to classify new, unseen images.
+Credit risk assessment: a model is trained on a dataset of labeled credit applications (approved or denied) and used to assess the credit risk of new applicants.
+
+4. In supervised learning, what are classification and regression?
+In supervised learning, classification is the task of predicting a discrete class label (e.g. binary or multi-class classification), while regression is the task of predicting a continuous target variable.
+
+5. Give some popular classification algorithms as examples.
+Logistic Regression
+Naive Bayes
+Decision Trees
+Random Forest
+Support Vector Machines
+K-Nearest Neighbors
+
+6. Briefly describe the SVM model.
+The Support Vector Machine (SVM) model is a binary classification model that finds the hyperplane that best separates two classes in a high-dimensional space. The hyperplane is chosen to maximize the margin between the two classes, and the model can also use a kernel function to transform the input features to a higher-dimensional space for better separation.
+
+7. In SVM, what is the cost of misclassification?
+The cost of misclassification in SVM refers to the penalty assigned to misclassifying a data point. It is determined by a hyperparameter called C, where a higher value of C results in a higher penalty for misclassification and a lower tolerance for errors.
+
+8. In the SVM model, define Support Vectors.
+Support Vectors are the data points that lie closest to the hyperplane in the SVM model. They are the points that define the margin and are used to calculate the optimal hyperplane.
+
+9. In the SVM model, define the kernel.
+In the SVM model, the kernel is a function that maps the input features into a higher-dimensional space where the data may be more separable. The kernel function can be linear or non-linear and is chosen based on the characteristics of the data.
+
+10. What are the factors that influence SVM's effectiveness?
+The factors that influence SVM's effectiveness include the choice of kernel function, the value of the regularization parameter C, the size of the training dataset, and the choice of hyperparameters.
+
+11. What are the benefits of using the SVM model?
+The benefits of using the SVM model include its ability to handle high-dimensional data, its flexibility in choosing different kernel functions, and its effectiveness in dealing with non-linearly separable data
+
+12.  What are the drawbacks of using the SVM model?
+The drawbacks of using the SVM model include its sensitivity to the choice of hyperparameters and kernel function, its susceptibility to overfitting when dealing with noisy data, and its high computational cost when dealing with large datasets.
+
+13. Notes should be written on
+
+1. The kNN algorithm has a validation flaw. - One major flaw in the kNN algorithm is that it is heavily reliant on the training data set, making it sensitive to the quality and representativeness of the data. If the training data is noisy, biased, or does not represent the target population, the kNN algorithm's performance may suffer. Additionally, kNN does not provide a way to handle missing data, which may also impact its performance.
+
+2. In the kNN algorithm, the k value is chosen.- The k value in the kNN algorithm represents the number of nearest neighbors to be considered when making a prediction. Choosing an appropriate k value is critical to the algorithm's success, as it can significantly impact the accuracy and robustness of the predictions. A small k value may result in overfitting, while a large k value may lead to underfitting. Therefore, the selection of k requires careful consideration, and cross-validation techniques can be used to identify the optimal k value.
+
+3. A decision tree with inductive bias - A decision tree with inductive bias is a type of decision tree that is built with a set of predefined heuristics, or biases, to guide the tree-growing process. These heuristics aim to improve the tree's predictive accuracy and generalization by reducing the search space and preventing overfitting. The inductive biases can include constraints on the maximum depth, minimum number of samples required at each leaf node, and maximum number of leaf nodes. By incorporating such constraints, the decision tree can be made less complex, easier to interpret, and more robust against noisy or irrelevant features in the data.
+
+14. What are some of the benefits of the kNN algorithm?
+Simple and easy to understand.
+No assumption is made about the underlying data distribution.
+Can handle multi-class classification problems.
+Can be used for both regression and classification tasks.
+Can perform well with small datasets.
+
+15. What are some of the kNN algorithm's drawbacks?
+Computationally expensive, as it requires a lot of memory and time for searching nearest neighbors.
+Sensitive to irrelevant features and noisy data.
+Requires a proper choice of the value of k.
+Cannot learn from the data, as it simply stores the training data.
+
+16. Explain the decision tree algorithm in a few words.
+The decision tree algorithm is a machine learning algorithm that builds a tree-like model of decisions and their possible consequences. It breaks down a dataset into smaller and smaller subsets while at the same time, an associated decision tree is incrementally developed.
+
+17. What is the difference between a node and a leaf in a decision tree?
+A node is a decision point in a decision tree that splits the data into smaller subsets based on a feature, while a leaf node is a terminal node that represents a class label or a numerical value.
+
+18. What is a decision tree's entropy?
+In a decision tree, entropy is a measure of impurity or randomness in a set of examples. It is used to decide the best feature to use for splitting the data at a node.
+
+19. In a decision tree, define knowledge gain.
+In a decision tree, knowledge gain is a measure of the effectiveness of a feature in classifying the training data. It is calculated as the difference between the entropy of the parent node and the weighted average entropy of the child nodes.
+
+20. Choose three advantages of the decision tree approach and write them down.
+Easy to understand and interpret.
+Can handle both categorical and numerical data.
+Can handle missing values and noisy data.
+Can be used for both classification and regression tasks.
+Can help identify important features.
+
+21. Make a list of three flaws in the decision tree process.
+Can be prone to overfitting, especially with noisy data.
+Can create biased trees if some classes dominate.
+Can be sensitive to small variations in the data, leading to instability.
+Can become complex and difficult to interpret with large trees.
+
+22. Briefly describe the random forest model.
+Random forest is an ensemble learning method that combines multiple decision trees to improve the accuracy and stability of the model. It creates a set of decision trees on randomly sampled data with replacement, and aggregates the predictions of each tree to make a final prediction. It can handle both classification and regression tasks, and can help identify important features.
