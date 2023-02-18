@@ -1,0 +1,41 @@
+1. What is prior probability? Give an example.
+Prior probability is the probability of an event occurring before any new data or evidence is taken into account. For example, if we flip a fair coin, the prior probability of it landing heads is 0.5.
+
+2. What is posterior probability? Give an example.
+Posterior probability is the updated probability of an event occurring after new data or evidence is taken into account. For example, if we flip a coin 10 times and it lands heads 7 times, the posterior probability of it landing heads is approximately 0.7.
+
+3. What is likelihood probability? Give an example.
+Likelihood probability is the probability of observing the data given a certain hypothesis. For example, if we flip a coin 10 times and it lands heads 7 times, the likelihood probability of it being a fair coin is lower than the likelihood probability of it being a biased coin that lands heads more often than tails.
+
+4. What is Naïve Bayes classifier? Why is it named so?
+Naïve Bayes classifier is a probabilistic classification algorithm that uses Bayes' theorem to predict the class of a new data point. It is called "naïve" because it assumes that the features are conditionally independent given the class, which is often not true in reality.
+
+5. What is optimal Bayes classifier?
+Optimal Bayes classifier is a theoretical classification algorithm that achieves the best possible performance by choosing the class with the highest posterior probability. However, it requires knowledge of the true prior probabilities and the true conditional probabilities, which are often unknown in practice.
+
+6. Write any two features of Bayesian learning methods.
+They can handle uncertainty and incorporate prior knowledge by using probabilistic models and Bayesian inference.
+They can update their beliefs and predictions as new data becomes available, which allows for adaptive and incremental learning.
+
+7. Define the concept of consistent learners.
+Consistent learners are learning algorithms that converge to the true concept or function as the amount of training data increases. In other words, they have the property of consistency, which guarantees that their predictions become more accurate as more data is used.
+
+8. Write any two strengths of Bayes classifier.
+It is a simple and efficient algorithm that can handle high-dimensional data and large datasets.
+It provides a probabilistic framework that allows for uncertainty modeling and decision-making under uncertainty.
+
+9. Write any two weaknesses of Bayes classifier.
+It assumes that the features are conditionally independent given the class, which may not be true in reality and can lead to poor performance.
+It requires estimation of the prior probabilities and the conditional probabilities from the training data, which may be biased or inaccurate and can affect the generalization performance.
+
+10. Explain how Naïve Bayes classifier is used for
+
+        1. Text classification
+
+        2. Spam filtering
+
+       3. Market sentiment analysis
+
+Text classification: Given a document, the classifier can predict its category (e.g., sports, politics, business) based on the occurrence of words or features in the document. This is often used in spam filtering, sentiment analysis, and topic modeling.
+Spam filtering: Given an email, the classifier can predict whether it is spam or not based on the presence or absence of certain words or features. This is often used in email systems to automatically filter out unwanted or malicious messages.
+Market sentiment analysis: Given a set of tweets or news articles, the classifier can predict the sentiment (e.g., positive, negative, neutral) of the market towards a particular product or company. This is often used in finance and marketing to monitor public opinion and make investment or advertising decisions.
