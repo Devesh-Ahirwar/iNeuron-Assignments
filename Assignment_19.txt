@@ -1,0 +1,119 @@
+
+1. A set of one-dimensional data points is given to you: 5, 10, 15, 20, 25, 30, 35. Assume that k = 2 and that the first set of random centroid is 15, 32, and that the second set is 12, 30.
+a) Using the k-means method, create two clusters for each set of centroid described above.
+b) For each set of centroid values, calculate the SSE.
+
+a) Using the k-means method, create two clusters for each set of centroid described above.
+
+    For the first set of centroid (15, 32), the clusters are:
+        Cluster 1: (5,10,15,20,25) with centroid 15
+        Cluster 2: (30,35) with centroid 32
+    For the second set of centroid (12, 30), the clusters are:
+        Cluster 1: (5,10,15) with centroid 10
+        Cluster 2: (20,25,30,35) with centroid 27.5
+
+b) For each set of centroid values, calculate the SSE.
+
+    For the first set of centroid (15, 32):
+        SSE of Cluster 1 = ((5-15)^2 + (10-15)^2 + (15-15)^2 + (20-15)^2 + (25-15)^2) = 250
+        SSE of Cluster 2 = ((30-32)^2 + (35-32)^2) = 13
+        Total SSE = 250 + 13 = 263
+    For the second set of centroid (12, 30):
+        SSE of Cluster 1 = ((5-10)^2 + (10-10)^2 + (15-10)^2) = 25
+        SSE of Cluster 2 = ((20-27.5)^2 + (25-27.5)^2 + (30-27.5)^2 + (35-27.5)^2) = 212.5
+        Total SSE = 25 + 212.5 = 237.5
+
+2. Describe how the Market Basket Research makes use of association analysis concepts.
+Market Basket Research uses association analysis concepts to identify the association between different items in a transaction. The Apriori algorithm is commonly used in market basket analysis to mine frequent item sets and association rules from a transaction dataset. By analyzing the co-occurrence of items in transactions, it is possible to identify which items are frequently purchased together, and this information can be used to create product bundles, design store layouts, and develop marketing strategies.
+
+3. Give an example of the Apriori algorithm for learning association rules.
+    
+
+Suppose we have a dataset of transactions from a grocery store, and you want to determine which items are frequently purchased together. The Apriori algorithm can be used to learn association rules between the items. Here's an example:
+
+Transaction 1: Bread, Milk
+Transaction 2: Bread, Diapers, Beer, Eggs
+Transaction 3: Milk, Diapers, Beer, Cola
+Transaction 4: Bread, Milk, Diapers, Beer
+Transaction 5: Bread, Milk, Diapers, Cola
+
+The first step of the Apriori algorithm is to determine the support of each itemset. The support is the proportion of transactions that contain the itemset. For example, the support of {Bread, Milk} is 3/5, since it appears in three out of five transactions.
+
+The second step is to generate candidate itemsets of size k+1 based on frequent itemsets of size k. For example, if the frequent itemsets of size 2 are {Bread, Milk}, {Bread, Diapers}, {Milk, Diapers}, and {Diapers, Beer}, then the candidate itemsets of size 3 are {Bread, Milk, Diapers}, {Bread, Diapers, Beer}, {Milk, Diapers, Beer}, and so on.
+
+The third step is to determine the support of the candidate itemsets and discard those that have support less than a threshold. The remaining itemsets are considered frequent.
+
+Finally, association rules are generated from the frequent itemsets by applying a minimum confidence threshold. For example, if the frequent itemsets include {Bread, Milk, Diapers} and {Bread, Diapers, Beer}, then the association rule {Bread, Diapers} -> {Beer} can be generated if the confidence is above a certain threshold
+
+4. In hierarchical clustering, how is the distance between clusters measured? Explain how this metric is used to decide when to end the iteration.
+In hierarchical clustering, the distance between clusters is typically measured using one of several distance metrics, such as Euclidean distance, Manhattan distance, or Pearson correlation distance. The choice of distance metric depends on the nature of the data and the research question being investigated.
+
+During the clustering process, clusters are iteratively merged based on their similarity, which is computed using the distance metric. The iteration continues until all data points are grouped into a single cluster or until a stopping criterion is met.
+
+The stopping criterion depends on the type of hierarchical clustering being used. In agglomerative clustering, the most common approach, clusters are successively merged until all data points are in a single cluster. In divisive clustering, the process is reversed, with all data points initially assigned to a single cluster and then recursively split into smaller clusters until some stopping criterion is met.
+
+The stopping criterion for agglomerative clustering is often based on the distance between the newly merged clusters. A dendrogram, which is a tree-like diagram that represents the order and distance of merges, can be used to visualize the clustering process and help determine the appropriate stopping point. The choice of stopping criterion depends on the nature of the data and the research question being investigated, and may require some trial and error.
+
+5. In the k-means algorithm, how do you recompute the cluster centroids?
+In the k-means algorithm, the cluster centroids are recomputed in each iteration of the algorithm. The process of recomputing the centroids involves taking the mean of all data points assigned to a cluster, which becomes the new centroid for that cluster.
+
+Here are the steps to recompute the cluster centroids:
+
+    For each cluster, calculate the mean of all the data points assigned to that cluster.
+    Update the centroid of that cluster to be the new mean.
+    Repeat steps 1 and 2 for all clusters.
+
+After recomputing the cluster centroids, the algorithm assigns each data point to the nearest centroid and then repeats the process until the centroids no longer change significantly, or a maximum number of iterations is reached. The result is a set of k clusters, with each data point assigned to one of the clusters.
+
+6. At the start of the clustering exercise, discuss one method for determining the required number of clusters.
+Determining the required number of clusters at the start of the clustering exercise is a crucial step in the process. One method for determining the required number of clusters is the elbow method. In the elbow method, the sum of squared errors (SSE) is calculated for different values of k (the number of clusters) and plotted against the number of clusters. The SSE value is a measure of how closely the data points are grouped around the cluster centroid. The plot will form an elbow shape, where the SSE decreases rapidly at first and then levels off. The number of clusters at the point of the elbow is considered the optimal number of clusters. This method is subjective and requires some level of interpretation, but it is a simple and effective way to determine the number of clusters.
+
+7. Discuss the k-means algorithm's advantages and disadvantages.
+The k-means algorithm has several advantages and disadvantages, which are as follows:
+
+Advantages:
+
+    Easy to implement: The k-means algorithm is straightforward to implement and understand. The algorithm is easy to apply to large datasets and can process the data quickly.
+    Fast: The k-means algorithm is one of the fastest clustering algorithms, making it suitable for applications that require quick results.
+    Scalability: The algorithm scales well with large datasets and can efficiently handle high-dimensional data.
+    Flexibility: The k-means algorithm can work with different types of data, such as numerical and categorical data.
+
+Disadvantages:
+
+    Sensitive to initial conditions: The k-means algorithm is sensitive to the initial conditions, which can result in different clustering results.
+    Selection of K: The selection of the number of clusters (k) is a difficult task, and choosing an incorrect k can lead to poor clustering results.
+    Limitation on Cluster Shapes: The k-means algorithm can only handle spherical clusters, making it unsuitable for complex-shaped clusters.
+    Outliers: The algorithm is sensitive to outliers, which can significantly affect the clustering results.
+
+Overall, the k-means algorithm is a powerful and flexible clustering algorithm that can be applied to various data types. However, it is crucial to choose the right k value, preprocess data to remove outliers, and consider the initial conditions to obtain accurate clustering results.
+
+8. Draw a diagram to demonstrate the principle of clustering.
+
+9. During your study, you discovered seven findings, which are listed in the data points below. Using the K-means algorithm, you want to build three clusters from these observations. The clusters C1, C2, and C3 have the following findings after the first iteration:
+
+C1: (2,2), (4,4), (6,6); C2: (2,2), (4,4), (6,6); C3: (2,2), (4,4),
+
+C2: (0,4), (4,0), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4), (0,
+
+C3: (5,5) and (9,9)
+
+What would the cluster centroids be if you were to run a second iteration? What would this clustering's SSE be?
+Based on the given information, the initial cluster centroids are:
+
+C1: (2,2), (4,4), (6,6)
+C2: (0,4), (4,0), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4)
+C3: (5,5), (9,9)
+
+To recompute the cluster centroids in the second iteration, we need to calculate the mean of each cluster:
+
+C1: (2,2), (4,4), (6,6) => Centroid = (4,4)
+C2: (0,4), (4,0), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4) => Centroid = (0.89, 2.67)
+C3: (5,5), (9,9) => Centroid = (7,7)
+
+The SSE (Sum of Squared Errors) for this clustering after the first iteration was:
+
+SSE = (0-0.89)^2 + (4-2.67)^2 + (0-0.89)^2 + (0-0.89)^2 + (0-0.89)^2 + (0-0.89)^2 + (0-0.89)^2 + (0-0.89)^2 + (0-0.89)^2 + (5-7)^2 + (9-7)^2 + (2-4)^2 + (4-4)^2 + (6-4)^2 = 36.08
+
+After recomputing the centroids and running the second iteration, the new SSE will depend on whether the data points change clusters or not. If there is no change, the SSE will remain the same as before. If there is a change, the SSE will be recalculated using the new centroids.
+
+10. In a software project, the team is attempting to determine if software flaws discovered during testing are identical. Based on the text analytics of the defect details, they decided to build 5 clusters of related defects. Any new defect formed after the 5 clusters of defects have been identified must be listed as one of the forms identified by clustering. A simple diagram can be used to explain this process. Assume you have 20 defect data points that are clustered into 5 clusters and you used the k-means algorithm.
