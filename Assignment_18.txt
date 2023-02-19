@@ -1,0 +1,66 @@
+    What is the difference between supervised and unsupervised learning? Give some examples to illustrate your point.
+
+Supervised learning is a type of machine learning in which the algorithm is trained on labeled data, with the goal of predicting the labels of new, unseen data. Examples of supervised learning include image classification, spam filtering, and language translation.
+
+Unsupervised learning, on the other hand, is a type of machine learning in which the algorithm is trained on unlabeled data, with the goal of discovering patterns or structure in the data. Examples of unsupervised learning include clustering, anomaly detection, and dimensionality reduction.
+
+    Mention a few unsupervised learning applications.
+
+Some examples of unsupervised learning applications include:
+
+    Clustering: grouping similar data points together based on their characteristics
+    Anomaly detection: identifying unusual patterns or outliers in data
+    Dimensionality reduction: reducing the number of features or variables in a dataset while preserving important information
+    Association rule mining: discovering patterns or relationships between items in a dataset
+
+    What are the three main types of clustering methods? Briefly describe the characteristics of each.
+
+The three main types of clustering methods are:
+
+    Hierarchical clustering: builds a hierarchy of clusters by either merging small clusters into larger ones (agglomerative) or dividing large clusters into smaller ones (divisive)
+    Partitioning clustering: separates the data into a pre-determined number of non-overlapping clusters using an optimization function to minimize the distance between points within each cluster
+    Density-based clustering: groups points based on their density in the data, with clusters being areas of high density separated by areas of low density
+
+    Explain how the k-means algorithm determines the consistency of clustering.
+
+The k-means algorithm determines the consistency of clustering by minimizing the sum of squared distances between each point and its assigned centroid. The algorithm randomly initializes k centroids, assigns each point to the nearest centroid, re-calculates the centroid of each cluster based on the assigned points, and repeats the process until the centroids no longer move.
+
+    With a simple illustration, explain the key difference between the k-means and k-medoids algorithms.
+
+The key difference between the k-means and k-medoids algorithms is the way they choose the cluster centers. In k-means, the cluster center is the mean of all the points assigned to the cluster, while in k-medoids, the cluster center is the data point that minimizes the sum of squared distances to all other points in the cluster. This means that k-medoids is more robust to outliers than k-means.
+
+    What is a dendrogram, and how does it work? Explain how to do it.
+
+A dendrogram is a diagram that displays the hierarchical relationship between clusters in a hierarchical clustering algorithm. It works by representing each point as a leaf node at the bottom of the diagram, and then gradually merging points into clusters as you move up the diagram. The height at which each cluster is merged is represented by the length of the vertical lines connecting them. To create a dendrogram, you start with each point as its own cluster, then merge the two closest clusters at each step until there is only one cluster left.
+
+    What exactly is SSE? What role does it play in the k-means algorithm?
+
+SSE stands for sum of squared errors and is a measure of the variability within a cluster in k-means. It represents the sum of the squared distances between each point in a cluster and the centroid of that cluster. The k-means algorithm uses SSE to evaluate the consistency of clustering, as it tries to minimize the SSE by finding the optimal cluster centers.
+
+    With a step-by-step algorithm, explain the k-means procedure.
+
+
+The k-means algorithm has the following steps:
+
+    Initialize k centroids randomly from the data points.
+
+    Assign each data point to its nearest centroid.
+
+    Recalculate the centroids of each cluster as the mean of all data points belonging to that cluster.
+
+    Repeat steps 2 and 3 until convergence (when the SSE between the centroids and the data points no longer changes significantly).
+
+    In the sense of hierarchical clustering, define the terms single link and complete link.
+
+
+Single link and complete link are two different types of linkage criteria used in hierarchical clustering:
+
+    Single link: This linkage criterion considers the minimum distance between any two points in each cluster. It is also known as the nearest neighbor method, where the distance between two clusters is defined as the shortest distance between any two points in the two clusters.
+    Complete link: This linkage criterion considers the maximum distance between any two points in each cluster. It is also known as the farthest neighbor method, where the distance between two clusters is defined as the maximum distance between any two points in the two clusters.
+
+    
+    How does the apriori concept aid in the reduction of measurement overhead in a business basket analysis? Give an example to demonstrate your point.
+
+The apriori concept is a popular algorithm used in association rule mining to identify frequent itemsets in large datasets. It aids in the reduction of measurement overhead in a business basket analysis by eliminating infrequent itemsets from the dataset, which can reduce the number of possible associations that need to be examined.
+
+For example, consider a grocery store that wants to analyze the sales patterns of its customers. By using the apriori algorithm, the store can identify the items that are frequently purchased together, such as bread and butter. This can help the store create better product placement strategies and promotions to increase sales. Additionally, by filtering out infrequent itemsets, the store can reduce the computational resources required to perform the analysis.
