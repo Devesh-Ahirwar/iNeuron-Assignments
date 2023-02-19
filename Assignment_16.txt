@@ -1,0 +1,47 @@
+1. In a linear equation, what is the difference between a dependent variable and an independent variable?
+In a linear equation, the dependent variable is the output, or response variable, which is affected by the changes in the independent variable. The independent variable is the input or explanatory variable that influences the dependent variable.
+
+2. What is the concept of simple linear regression? Give a specific example.
+Simple linear regression is a statistical method used to study the relationship between two continuous variables by fitting a linear equation to the observed data. For example, we could use simple linear regression to understand the relationship between a person's height and their weight.
+
+3. In a linear regression, define the slope.
+In linear regression, the slope is the measure of the change in the dependent variable as a result of a change in the independent variable. It represents the rate of change of the dependent variable with respect to the independent variable.
+
+4. Determine the graph's slope, where the lower point on the line is represented as (3, 2) and the higher point is represented as (2, 2).
+The slope of the line represented by the two points (3, 2) and (2, 2) is 0 because the y-coordinate remains constant while the x-coordinate changes. Therefore, the line is horizontal.
+
+5. In linear regression, what are the conditions for a positive slope?
+In linear regression, a positive slope exists when the dependent variable increases as the independent variable increases. This means that as the value of the independent variable increases, the predicted value of the dependent variable also increases.
+
+6. In linear regression, what are the conditions for a negative slope?
+In linear regression, a negative slope exists when the dependent variable decreases as the independent variable increases. This means that as the value of the independent variable increases, the predicted value of the dependent variable decreases.
+
+7. What is multiple linear regression and how does it work?
+Multiple linear regression is a statistical technique that allows the study of the relationship between a dependent variable and multiple independent variables. It works by fitting a linear equation to the observed data with more than one independent variable.
+
+8. In multiple linear regression, define the number of squares due to error.
+In multiple linear regression, the sum of the squares due to error is the sum of the squared differences between the actual values and the predicted values of the dependent variable. It measures the extent to which the model does not fit the data.
+
+9. In multiple linear regression, define the number of squares due to regression.
+In multiple linear regression, the sum of squares due to regression is the sum of the squared differences between the predicted values and the mean value of the dependent variable. It measures the extent to which the independent variables explain the variation in the dependent variable.
+
+10. In a regression equation, what is multicollinearity?
+In a regression equation, multicollinearity refers to the high correlation between independent variables. It can lead to incorrect estimates of the regression coefficients and reduce the accuracy of the model.
+
+11. What is heteroskedasticity, and what does it mean?
+Heteroskedasticity is a violation of the assumption of equal variance in a regression model, where the variance of the errors is not constant across the range of the independent variable. It can result in biased and inefficient estimates of the regression coefficients.
+
+12. Describe the concept of ridge regression.
+Ridge regression is a technique used to deal with multicollinearity by adding a penalty term to the regression equation. It shrinks the regression coefficients towards zero and reduces their variance, leading to more stable and reliable estimates.
+
+13. Describe the concept of lasso regression.
+Lasso regression is another technique used to deal with multicollinearity by adding a penalty term to the regression equation. It shrinks the regression coefficients towards zero and also performs variable selection by setting some coefficients to exactly zero, leading to a more parsimonious model.
+
+14. What is polynomial regression and how does it work?
+Polynomial regression is a form of regression analysis that models the relationship between a dependent variable and one or more independent variables by fitting a polynomial function to the observed data. It allows for a curved relationship between the variables.
+
+15. Describe the basis function.
+A basis function is a mathematical function used to transform the independent variables in a regression model into a different set of variables that are easier to model. They are typically chosen to be orthogonal to each other to reduce multicollinearity.
+
+16. Describe how logistic regression works.
+Logistic regression is a statistical method used to model the relationship between a binary dependent variable and one or more independent variables. It works by fitting a logistic function to the observed data, which maps the input variables to the probability of the dependent variable being 1.
