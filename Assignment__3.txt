@@ -1,0 +1,14 @@
+1. What is the concept of an abstract superclass?
+An abstract superclass is a class that is defined with the intent of being inherited by other classes. It provides a basic structure and set of methods that can be implemented by its subclasses, but it does not provide a complete implementation of those methods. Instead, it is designed to be extended and specialized by its subclasses.
+
+2. What happens when a class statement's top level contains a basic assignment statement?
+When a class statement's top level contains a basic assignment statement, it creates a class-level attribute. This attribute is shared by all instances of the class and can be accessed using the class name.
+
+3. Why does a class need to manually call a superclass's __init__ method?
+A class needs to manually call a superclass's init method in order to ensure that any necessary initialization code from the superclass is executed. If the subclass does not call the superclass's init method, the superclass's initialization code will not be executed and the subclass may not behave as expected.
+
+4. How can you augment, instead of completely replacing, an inherited method?
+To augment an inherited method, you can call the superclass's implementation of the method using the super() function and then modify the result as necessary. This allows you to reuse the superclass's implementation while adding or changing functionality as needed.
+
+5. How is the local scope of a class different from that of a function?
+The local scope of a class is different from that of a function in several ways. First, a class has its own namespace that is separate from the global namespace, whereas a function shares the global namespace. Second, a class definition creates a new scope, which includes the class's attributes and methods, but does not include any code outside of the class definition. Finally, unlike a function, a class definition does not create a new execution context when it is called; instead, it creates a new object that can be used to create instances of the class.
