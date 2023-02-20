@@ -1,0 +1,68 @@
+1.How many seconds are in an hour? Use the interactive interpreter as a calculator and multiply the number of seconds in a minute (60) by the number of minutes in an hour (also 60).
+To calculate the number of seconds in an hour, we can use the interactive interpreter as follows:
+>>> 60 * 60
+3600
+
+2. Assign the result from the previous task (seconds in an hour) to a variable called seconds_per_hour.
+To assign the result from the previous task to a variable called seconds_per_hour, we can do the following:
+>>> seconds_per_hour = 60 * 60
+>>> seconds_per_hour
+3600
+
+3. How many seconds do you think there are in a day? Make use of the variables seconds per hour and minutes per hour.
+To calculate the number of seconds in a day, we can use the variables seconds_per_hour and minutes_per_hour as follows:
+# Number of seconds per hour
+seconds_per_hour = 60 * 60
+
+# Number of minutes per hour
+minutes_per_hour = 60
+
+# Number of hours per day
+hours_per_day = 24
+
+# Total number of seconds in a day
+seconds_per_day = seconds_per_hour * minutes_per_hour * hours_per_day
+>>> seconds_per_day
+86400
+
+
+
+4. Calculate seconds per day again, but this time save the result in a variable called seconds_per_day
+We can calculate seconds_per_day and save the result in a variable with the same name as follows:
+>>> seconds_per_day = seconds_per_hour * 24
+>>> seconds_per_day
+86400
+
+5. Divide seconds_per_day by seconds_per_hour. Use floating-point (/) division.
+To calculate how many times seconds_per_hour goes into seconds_per_day, we can perform floating-point division:
+>>> seconds_per_day / seconds_per_hour
+24.0
+
+6. Divide seconds_per_day by seconds_per_hour, using integer (//) division. Did this number agree with the floating-point value from the previous question, aside from the final .0?
+We can also perform integer division to achieve the same result:
+>>> seconds_per_day // seconds_per_hour
+24
+
+7. Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to its next() method: 2, 3, 5, 7, 11, ...
+def genPrimes():
+    primes = []  
+    n = 2 
+    while True:
+        if all(n % p != 0 for p in primes):
+            primes.append(n)
+            yield n
+        n += 1
+>>> prime_generator = genPrimes()
+>>> next(prime_generator)
+2
+>>> next(prime_generator)
+3
+>>> next(prime_generator)
+5
+>>> next(prime_generator)
+7
+>>> next(prime_generator)
+11
+>>> next(prime_generator)
+13
+
