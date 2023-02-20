@@ -1,0 +1,60 @@
+1. A set of one-dimensional data points is given to you: 5, 10, 15, 20, 25, 30, 35. Assume that k = 2 and that the first set of random centroid is 15, 32, and that the second set is 12, 30.
+a) Using the k-means method, create two clusters for each set of centroid described above.
+b) For each set of centroid values, calculate the SSE.
+
+a) Using the k-means method with the given centroid values:
+
+First set: cluster 1 contains 5, 10, 15, 20, and cluster 2 contains 25, 30, 35.
+Second set: cluster 1 contains 5, 10, 12, 15, 20, 25, 30 and cluster 2 contains 32, 35.
+
+b) For the first set of centroid values, the SSE is (5-15)^2 + (10-15)^2 + (15-15)^2 + (20-15)^2 + (25-32)^2 + (30-32)^2 + (35-32)^2 = 194.
+For the second set of centroid values, the SSE is (5-12)^2 + (10-12)^2 + (12-12)^2 + (15-12)^2 + (20-25)^2 + (25-30)^2 + (30-30)^2 + (32-30)^2 + (35-30)^2 = 242.
+
+2. Describe how the Market Basket Research makes use of association analysis concepts.
+Market Basket Analysis is a data mining technique that uses association analysis concepts to identify products that are often purchased together by customers. It involves analyzing a transaction dataset to determine which items frequently appear together in baskets or transactions. Association rules are then established to show the strength of the relationship between the items. These rules can be used for product recommendations, store layout optimization, and sales strategy.
+
+
+3. Give an example of the Apriori algorithm for learning association rules.
+The Apriori algorithm for learning association rules involves identifying frequent itemsets in a transaction dataset and then generating association rules based on the itemsets. The algorithm works by first identifying all frequent 1-itemsets, then generating frequent 2-itemsets from the frequent 1-itemsets, and so on until no more frequent itemsets can be found. The algorithm then generates association rules from the frequent itemsets, where the confidence of the rule measures the strength of the association between the items.
+
+
+4. In hierarchical clustering, how is the distance between clusters measured? Explain how this metric is used to decide when to end the iteration.
+In hierarchical clustering, the distance between clusters is measured using a distance metric such as Euclidean distance or Manhattan distance. The distance between clusters is used to construct a dendrogram, which is a hierarchical tree-like structure that shows the relationship between the clusters. The iteration is stopped when the desired number of clusters is reached or when the distance between the clusters exceeds a certain threshold.
+
+
+5. In the k-means algorithm, how do you recompute the cluster centroids?
+In the k-means algorithm, the cluster centroids are recomputed by calculating the mean of all data points assigned to the cluster. Specifically, for each cluster, the algorithm calculates the mean of the data points assigned to that cluster and sets the new centroid to be the calculated mean.
+
+
+6. At the start of the clustering exercise, discuss one method for determining the required number of clusters.
+One method for determining the required number of clusters is the elbow method, which involves plotting the SSE (Sum of Squared Errors) for different values of k (number of clusters) and selecting the value of k at the elbow point of the graph. The elbow point is the point at which the SSE starts to level off, indicating that adding more clusters does not significantly reduce the SSE.
+
+
+7. Discuss the k-means algorithm's advantages and disadvantages.
+The advantages of the k-means algorithm are that it is easy to implement, efficient for large datasets, and often produces good results. The disadvantages are that the algorithm requires specifying the number of clusters beforehand, is sensitive to the initial choice of centroids, and may converge to a local optimum instead of the global optimum.
+
+
+8. During your study, you discovered seven findings, which are listed in the data points below. Using the K-means algorithm, you want to build three clusters from these observations. The clusters C1, C2, and C3 have the following findings after the first iteration:
+
+C1: (2,2), (4,4), (6,6); C2: (2,2), (4,4), (6,6); C3: (2,2), (4,4),
+
+C2: (0,4), (4,0), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4), (0,
+
+C3: (5,5) and (9,9)
+
+What would the cluster centroids be if you were to run a second iteration? What would this clustering's SSE be?
+After the first iteration, the clusters would be:
+C1: (2,2), (4,4), (6,6)
+C2: (0,4), (4,0), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4), (0,4)
+C3: (5,5), (9,9)
+To calculate the new centroids, we take the mean of each cluster:
+
+C1 centroid: (4, 4)
+C2 centroid: (0, 4)
+C3 centroid: (7, 7)
+The SSE for this clustering would be:
+SSE = sum of squared distances of points to their respective cluster centroids
+SSE = ((2-4)^2 + (2-4)^2 + (4-4)^2 + (4-4)^2 + (6-4)^2 + (0-0)^2 + (4-0)^2 + (0-0)^2 + (0-0)^2 + (0-0)^2 + (0-0)^2 + (0-0)^2 + (0-0)^2 + (0-0)^2 + (0-0)^2 + (0-4)^2 + (4-0)^2 + (0-4)^2 + (0-4)^2 + (0-4)^2 + (0-4)^2 + (0-4)^2 + (0-4)^2 + (0-4)^2 + (5-7)^2 + (9-7)^2)
+SSE = 88
+10. In a software project, the team is attempting to determine if software flaws discovered during testing are identical. Based on the text analytics of the defect details, they decided to build 5 clusters of related defects. Any new defect formed after the 5 clusters of defects have been identified must be listed as one of the forms identified by clustering. A simple diagram can be used to explain this process. Assume you have 20 defect data points that are clustered into 5 clusters and you used the k-means algorithm.
+The process of building 5 clusters of related defects can be visualized using a scatter plot, where each point represents a defect and the clusters are represented by different colors or shapes. Once the 5 clusters are identified, any new defect can be added to the appropriate cluster based on its similarity to the existing defects in that cluster. This process can be repeated periodically as new defects are discovered to ensure that all defects are appropriately categorized and analyzed.
