@@ -1,0 +1,41 @@
+
+1. What are the key reasons for reducing the dimensionality of a dataset? What are the major disadvantages?
+The key reasons for reducing the dimensionality of a dataset are to make it easier to visualize and understand, to speed up machine learning algorithms, and to reduce the complexity of the model. The major disadvantages are that information may be lost in the process, and the reduced dataset may be less interpretable.
+
+
+2. What is the dimensionality curse?
+The dimensionality curse refers to the fact that as the number of dimensions in a dataset increases, the amount of data needed to accurately represent the dataset grows exponentially, making it difficult to analyze and visualize high-dimensional data.
+
+
+
+3. Tell if its possible to reverse the process of reducing the dimensionality of a dataset? If so, how can you go about doing it? If not, what is the reason?
+It is generally not possible to reverse the process of reducing the dimensionality of a dataset. The information that is lost during the dimensionality reduction process cannot be recovered, so the original dataset cannot be reconstructed from the reduced dataset.
+
+
+
+4. Can PCA be utilized to reduce the dimensionality of a nonlinear dataset with a lot of variables?
+PCA can be used to reduce the dimensionality of a nonlinear dataset with a lot of variables, but the resulting reduced dataset may not be optimal. Nonlinear dimensionality reduction techniques such as kernel PCA may be more appropriate for nonlinear datasets.
+
+
+
+5. Assume you're running PCA on a 1,000-dimensional dataset with a 95 percent explained variance ratio. What is the number of dimensions that the resulting dataset would have?
+The number of dimensions in the resulting dataset would depend on the amount of explained variance required. If the 95 percent explained variance ratio is sufficient, then the resulting dataset would have a reduced number of dimensions, but the exact number of dimensions would depend on the data.
+
+
+
+6. Will you use vanilla PCA, incremental PCA, randomized PCA, or kernel PCA in which situations?
+The choice of PCA algorithm depends on the size and complexity of the dataset. Vanilla PCA is suitable for small to medium-sized datasets with a low to moderate number of features. Incremental PCA is suitable for large datasets that do not fit in memory, while randomized PCA is suitable for datasets with a large number of features. Kernel PCA is suitable for nonlinear datasets.
+
+
+
+7. How do you assess a dimensionality reduction algorithm's success on your dataset?
+The success of a dimensionality reduction algorithm can be assessed by evaluating how well the reduced dataset preserves the original data's variance and how well it performs on downstream tasks such as classification or clustering.
+
+
+
+8. Is it logical to use two different dimensionality reduction algorithms in a chain?
+It is logical to use two different dimensionality reduction algorithms in a chain if the first algorithm does not produce an optimal reduction, and the second algorithm can address the limitations of the first algorithm. However, it is important to be aware of the potential loss of information in each stage of the chain and to evaluate the performance of the overall pipeline.
+
+
+
+
