@@ -1,0 +1,18 @@
+Q1. Which two operator overloading methods can you use in your classes to support iteration?
+The two operator overloading methods that can be used in Python classes to support iteration are __iter__ and __next__.
+
+
+Q2. In what contexts do the two operator overloading methods manage printing?
+The two operator overloading methods that manage printing are __str__ and __repr__. __str__ is used to define the string representation of an object, while __repr__ is used to define a string that can be used to recreate the object.
+
+
+Q3. In a class, how do you intercept slice operations?
+In a class, you can intercept slice operations by implementing the __getitem__ method. The __getitem__ method should accept a slice object as its argument and return the appropriate portion of the object.
+
+
+Q4. In a class, how do you capture in-place addition?
+In a class, you can capture in-place addition by implementing the __iadd__ method. The __iadd__ method is called when the += operator is used on an object, and it should modify the object in place and return a reference to the modified object.
+
+
+Q5. When is it appropriate to use operator overloading?
+It is appropriate to use operator overloading when you want to define the behavior of operators on your custom objects. This can make your code more concise, readable, and intuitive, and can make it easier to work with custom objects in the same way that built-in objects are used. However, overuse of operator overloading can make your code harder to understand and maintain, so it's important to use it judiciously.
