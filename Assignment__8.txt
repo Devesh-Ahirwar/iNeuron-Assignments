@@ -1,0 +1,37 @@
+Devesh Kumar Ahirwar
+Q1. What are the two latest user-defined exception constraints in Python 3.X?
+
+
+
+Q2. How are class-based exceptions that have been raised matched to handlers?
+
+
+
+Q3. Describe two methods for attaching context information to exception artefacts.
+
+
+
+Q4. Describe two methods for specifying the text of an exception object's error message.
+
+
+
+Q5. Why do you no longer use string-based exceptions?
+
+Q1. The two latest user-defined exception constraints in Python 3.X are:
+
+The exception class must be derived from the built-in Exception class or one of its subclasses.
+The exception instance should be raised to indicate the occurrence of the event that the exception represents.
+
+Q2. Class-based exceptions that have been raised are matched to handlers based on their type hierarchy. When an exception is raised, Python searches for the first handler that matches the exception's class, in a chain of exception handlers that have been defined in the program. If no handler is found, the exception propagates up the call stack until a default handler is found or the program exits.
+
+Q3. Two methods for attaching context information to exception artefacts are:
+
+Adding attributes to the exception object. In Python, exception objects are just like any other objects and can have their attributes set. You can add context information to an exception object by setting attributes on it that hold the information you want to include.
+Using exception chaining. In Python, when one exception is caught and another exception is raised to indicate that an error has occurred, the new exception can include the original exception as context information. This is called exception chaining, and it allows you to preserve the original exception's context while raising a new exception that indicates the failure.
+
+Q4. Two methods for specifying the text of an exception object's error message are:
+
+Defining the str() or repr() method for the exception class. These methods can be defined in a custom exception class to provide a custom error message when an exception is raised. When an exception is raised, Python will call the str() or repr() method of the exception class to get the error message that should be displayed.
+Providing a message string as an argument to the exception constructor. When an exception is raised, you can pass a message string as an argument to the exception constructor to specify the error message that should be displayed. The message string can be accessed using the exception's str() method.
+
+Q5. String-based exceptions are no longer used in Python because they were error-prone and made it difficult to catch exceptions. In Python 2, it was possible to raise string exceptions, but this approach had several problems. For example, string exceptions were not compatible with the built-in exception hierarchy, which meant that they couldn't be caught by except clauses that were designed to catch specific types of exceptions. In Python 3, string exceptions have been replaced with class-based exceptions, which are more flexible and easier to work with.
