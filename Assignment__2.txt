@@ -1,0 +1,35 @@
+Q1. What is the relationship between classes and modules?
+In Python, a module is a file containing Python definitions and statements. It can define functions, classes, and variables, and can also include runnable code. On the other hand, a class is a blueprint for creating objects that defines a set of attributes and methods that the objects of that class will have. A module can contain one or more classes, as well as other definitions and statements. Classes are often defined in separate modules and then imported into other modules to be used in a program.
+
+
+
+
+Q2. How do you make instances and classes?
+To create an instance of a class in Python, we simply call the class and assign the resulting object to a variable.
+To create a class in Python, we use the "class" keyword followed by the name of the class and a colon, followed by the class definition. 
+
+Q3. Where and how should be class attributes created?
+Class attributes should be defined inside the class, but outside of any method. They are created by assigning a value to a variable with the class name as a prefix
+
+
+Q4. Where and how are instance attributes created?
+Instance attributes are created inside the class's methods, typically the __init__ method, by assigning a value to self.
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+Q5. What does the term "self" in a Python class mean?
+In a Python class, "self" is a reference to the instance of the class that the method is being called on. It is the first argument to every method of a class, and is used to access the instance's attributes and methods. When a method is called on an instance, Python automatically passes the instance as the first argument, which is why we use "self" as the name of the first argument.
+
+Q6. How does a Python class handle operator overloading?
+Python allows classes to define special methods that define how objects of that class respond to operators like +, -, *, and /, as well as other built-in functions like len() and str(). This is called "operator overloading".
+
+Q7. When do you consider allowing operator overloading of your classes?
+Operator overloading should be used sparingly and only when it makes sense to do so. It can make code more concise and easier to read, but it can also make code more difficult to understand and debug if overused or used incorrectly. Operator overloading is most appropriate when it makes intuitive sense for an operator to be applied to objects of a particular class.
+
+Q8. What is the most popular form of operator overloading?
+The most popular form of operator overloading in Python is the use of the "+" operator to concatenate strings or add numerical values.
+
+
+Q9. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+The two most important concepts to grasp in order to comprehend Python OOP code are inheritance and polymorphism. Inheritance allows for the creation of new classes that are modifications or extensions of existing classes, while polymorphism allows objects of different classes to be used interchangeably.
