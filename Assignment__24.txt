@@ -1,0 +1,43 @@
+1. What is your definition of clustering? What are a few clustering algorithms you might think of?
+Clustering is a technique in machine learning that involves grouping similar data points together based on their characteristics or features. Clustering algorithms can be used to discover hidden patterns or structures in a dataset. Some popular clustering algorithms include K-Means, Hierarchical clustering, and DBSCAN.
+
+
+
+2. What are some of the most popular clustering algorithm applications?
+Clustering algorithms have a wide range of applications, including customer segmentation, image segmentation, anomaly detection, and recommendation systems. For example, in customer segmentation, clustering algorithms can be used to group customers based on their demographics or purchase history, allowing businesses to create targeted marketing campaigns.
+
+
+
+3. When using K-Means, describe two strategies for selecting the appropriate number of clusters.
+Two common strategies for selecting the appropriate number of clusters when using K-Means are the elbow method and the silhouette method. The elbow method involves plotting the within-cluster sum of squares (WCSS) against the number of clusters, and selecting the number of clusters at the "elbow" of the curve. The silhouette method involves calculating the silhouette coefficient for each data point, which measures how similar it is to its own cluster compared to other clusters. The number of clusters is then selected based on the average silhouette coefficient across all data points.
+
+
+
+4. What is mark propagation and how does it work? Why would you do it, and how would you do it?
+Mark propagation is a semi-supervised learning technique that involves propagating class labels from a small set of labeled data points to a larger set of unlabeled data points. The technique works by assigning initial labels to the labeled data points, and then propagating these labels to neighboring unlabeled data points based on their similarity. Mark propagation can be useful when there is only a small amount of labeled data available, and can be implemented using algorithms such as label propagation or label spreading.
+
+
+
+5. Provide two examples of clustering algorithms that can handle large datasets. And two that look for high-density areas?
+Two clustering algorithms that can handle large datasets are Mini-Batch K-Means and Mean-Shift clustering. Mini-Batch K-Means is a variant of K-Means that processes small batches of data at a time, making it more memory-efficient than standard K-Means. Mean-Shift clustering is a non-parametric algorithm that does not require specifying the number of clusters in advance and can be applied to high-dimensional datasets. Two clustering algorithms that look for high-density areas are DBSCAN and OPTICS. Both of these algorithms are based on the density of points in the dataset and can identify clusters of varying shapes and sizes.
+
+
+
+6. Can you think of a scenario in which constructive learning will be advantageous? How can you go about putting it into action?
+Constructive learning can be advantageous in scenarios where the data is highly imbalanced, and there are only a few positive examples available. Constructive learning involves starting with a small set of positive examples and iteratively adding new positive examples to the training set based on their similarity to the existing positive examples. This approach can help to address the problem of class imbalance and improve the performance of the classifier. To put constructive learning into action, one would need to implement an algorithm that can identify new positive examples and add them to the training set, such as an active learning algorithm.
+
+
+
+7. How do you tell the difference between anomaly and novelty detection?
+Anomaly detection involves identifying data points that are significantly different from the rest of the dataset, while novelty detection involves identifying data points that are new or different from what the model has seen before. The main difference between the two is that anomaly detection is focused on identifying outliers or anomalies in the dataset, while novelty detection is focused on identifying new or previously unseen patterns. In practice, the two approaches may be used together to identify both anomalies and novel patterns.
+
+
+
+8. What is a Gaussian mixture, and how does it work? What are some of the things you can do about it?
+A Gaussian mixture is a probabilistic model used in unsupervised machine learning to model a dataset as a mixture of Gaussian distributions. A Gaussian mixture model (GMM) assumes that the data is generated from a mixture of several Gaussian distributions, each representing a cluster in the data. The model estimates the parameters of each Gaussian distribution, including the mean and covariance, using an algorithm such as expectation-maximization (EM). GMM can be used for clustering, classification, density estimation, and anomaly detection. Some things that can be done with a Gaussian mixture model include visualizing the clusters, adjusting the number of clusters, and identifying anomalies in the data.
+
+9. When using a Gaussian mixture model, can you name two techniques for determining the correct number of clusters?
+Two common techniques for determining the correct number of clusters when using a Gaussian mixture model are the elbow method and the Bayesian information criterion (BIC). The elbow method involves plotting the log-likelihood of the data against the number of clusters and selecting the number of clusters at the "elbow" of the curve, where adding more clusters does not lead to a significant improvement in the log-likelihood. The BIC method involves computing the BIC score for each model with different numbers of clusters and selecting the model with the lowest BIC score. The BIC score balances the fit of the model to the data with the complexity of the model, penalizing models with more parameters. Other methods for determining the number of clusters in a GMM include the Akaike information criterion (AIC), cross-validation, and likelihood-based model selection.
+
+
+
