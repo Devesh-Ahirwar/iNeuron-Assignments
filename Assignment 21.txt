@@ -1,0 +1,70 @@
+1. Add the current date to the text file today.txt as a string.
+from datetime import date
+
+with open('today.txt', 'w') as file:
+    file.write(str(date.today()))
+
+
+2. Read the text file today.txt into the string today_string
+with open('today.txt', 'r') as file:
+    today_string = file.read()
+
+
+3. Parse the date from today_string.
+from datetime import datetime
+
+today = datetime.strptime(today_string, '%Y-%m-%d').date()
+
+
+4. List the files in your current directory
+import os
+
+files = os.listdir('.')
+print(files)
+
+
+5. Create a list of all of the files in your parent directory (minimum five files should be available).
+import os
+
+parent_dir = os.path.dirname(os.getcwd())
+files = os.listdir(parent_dir)
+print(files)
+
+
+6. Use multiprocessing to create three separate processes. Make each one wait a random number of seconds between one and five, print the current time, and then exit.
+from multiprocessing import Process
+from random import randint
+from time import sleep
+from datetime import datetime
+
+def worker():
+    sleep(randint(1, 5))
+    print(datetime.now().strftime('%H:%M:%S'))
+
+if __name__ == '__main__':
+    for i in range(3):
+        p = Process(target=worker)
+        p.start()
+
+
+7. Create a date object of your day of birth.
+from datetime import date
+
+my_birthday = date(2000, 1, 1)
+
+
+8. What day of the week was your day of birth?
+from datetime import date
+
+my_birthday = date(2000, 1, 1)
+weekday = my_birthday.strftime('%A')
+print(weekday)
+
+
+9. When will you be (or when were you) 10,000 days old?
+from datetime import date, timedelta
+
+my_birthday = date(2000, 1, 1)
+ten_thousand_days = my_birthday + timedelta(days=10000)
+print(ten_thousand_days)
+
